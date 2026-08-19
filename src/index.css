@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  * {
+    @apply border-white/10;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    @apply bg-void text-starlight font-body antialiased;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+
+  ::selection {
+    background: rgba(94, 234, 212, 0.3);
+    color: #f5f7ff;
+  }
+
+  /* Visible, on-brand keyboard focus ring */
+  :focus-visible {
+    outline: 2px solid #5eead4;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply relative rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-xl shadow-panel;
+  }
+
+  .glass-panel-hover {
+    @apply transition-all duration-300 hover:border-cyan-glow/30 hover:bg-white/[0.06];
+  }
+
+  .section-shell {
+    @apply relative mx-auto w-full max-w-6xl px-6 sm:px-8 lg:px-10;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-cyan-glow/90;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-cyan-glow via-starlight to-violet-glow bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
