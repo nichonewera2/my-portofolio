@@ -1,47 +1,54 @@
 import { motion } from 'framer-motion'
-import { ArrowDown } from 'lucide-react'
+import { ArrowDown, Sparkles } from 'lucide-react'
 import IdentityFrame from '@/components/IdentityFrame'
 import Planet from '@/components/Planet'
+import Astronaut from '@/components/Astronaut'
+import ShootingStar from '@/components/ShootingStar'
 import { profile } from '@/data/profile'
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-20"
+      className="relative flex min-h-screen items-center overflow-hidden pt-32 pb-24"
     >
-      <Planet size={90} hue="violet" className="absolute -left-6 top-28 hidden lg:block" />
-      <Planet size={60} hue="cyan" className="absolute right-10 bottom-24 hidden lg:block" />
+      <Planet size={100} hue="violet" className="absolute -left-10 top-32 hidden lg:block" />
+      <Planet size={64} hue="cyan" className="absolute right-16 bottom-28 hidden lg:block" />
+      <ShootingStar top="18%" left="78%" delay="0.5s" />
+      <ShootingStar top="55%" left="8%" delay="3.2s" />
 
-      <div className="section-shell grid grid-cols-1 items-center gap-16 lg:grid-cols-[1.15fr_0.85fr]">
+      <div className="section-shell grid grid-cols-1 items-center gap-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
-          className="order-2 lg:order-1"
+          className="order-2 text-center lg:order-1 lg:text-left"
         >
           <span className="eyebrow">
             <span className="h-1.5 w-1.5 animate-pulse-glow rounded-full bg-cyan-glow" />
             {profile.status}
           </span>
 
-          <h1 className="mt-6 text-4xl font-bold leading-[1.1] tracking-tight text-starlight sm:text-5xl lg:text-6xl">
+          <h1 className="mt-6 text-[2.75rem] font-bold leading-[1.08] text-starlight sm:text-6xl lg:text-[4.2rem]">
             {profile.name.split(' ')[0]}{' '}
             <span className="text-gradient">{profile.name.split(' ').slice(1).join(' ')}</span>
           </h1>
 
-          <p className="mt-3 text-lg font-medium text-cyan-glow/90">{profile.role}</p>
+          <p className="mt-4 flex items-center justify-center gap-2 text-lg font-semibold text-cyan-glow/90 lg:justify-start">
+            <Sparkles size={16} className="shrink-0" />
+            {profile.role}
+          </p>
 
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-starlight/65 sm:text-lg">
+          <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-starlight/65 sm:text-lg lg:mx-0">
             {profile.tagline}
           </p>
 
-          <div className="mt-10 flex flex-wrap items-center gap-4">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
             <button
               onClick={() =>
                 document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
               }
-              className="rounded-full bg-cyan-glow px-7 py-3 text-sm font-semibold text-void shadow-glow transition-transform hover:scale-105 active:scale-95"
+              className="btn-bubble bg-cyan-glow px-8 py-3.5 text-sm font-bold text-void shadow-glow hover:shadow-[0_0_50px_-6px_rgba(94,234,212,0.55)]"
             >
               View Projects
             </button>
@@ -49,7 +56,7 @@ export default function Hero() {
               onClick={() =>
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
               }
-              className="glass-panel glass-panel-hover rounded-full px-7 py-3 text-sm font-semibold text-starlight"
+              className="btn-bubble glass-panel px-8 py-3.5 text-sm font-bold text-starlight hover:border-violet-glow/40"
             >
               Get in Touch
             </button>
@@ -60,9 +67,22 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: 'easeOut', delay: 0.15 }}
-          className="order-1 lg:order-2"
+          className="relative order-1 flex justify-center lg:order-2 lg:justify-end"
         >
-          <IdentityFrame />
+          <div className="relative">
+            <IdentityFrame />
+            <Astronaut
+              size={112}
+              pose="wave"
+              className="absolute -right-8 -top-6 sm:-right-10 sm:-top-8"
+            />
+            <Astronaut
+              size={72}
+              pose="float"
+              flip
+              className="absolute -bottom-4 -left-10 hidden sm:block"
+            />
+          </div>
         </motion.div>
       </div>
 

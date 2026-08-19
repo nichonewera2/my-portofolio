@@ -12,7 +12,7 @@ export default function Projects() {
           description="Small builds and bigger experiments — each one a step further into the universe of code."
         />
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:gap-8">
           {projects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}

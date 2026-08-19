@@ -20,9 +20,9 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.5, ease: 'easeOut', delay: groupIndex * 0.08 }}
-              className="glass-panel glass-panel-hover rounded-3xl p-6"
+              className="glass-panel glass-panel-hover rounded-bubble p-6"
             >
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-glow/80">
+              <p className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-violet-glow/80">
                 {group.label}
               </p>
               <ul className="mt-4 space-y-2.5">

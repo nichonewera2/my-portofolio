@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import SectionHeading from '@/components/SectionHeading'
 import SocialIcon from '@/components/SocialIcon'
 import Planet from '@/components/Planet'
+import Astronaut from '@/components/Astronaut'
 import { socials } from '@/data/socials'
 import { profile } from '@/data/profile'
 
@@ -23,10 +24,16 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="glass-panel mx-auto max-w-2xl rounded-3xl p-8 text-center sm:p-12"
+          className="glass-panel relative mx-auto max-w-2xl rounded-bubble-lg p-8 text-center sm:p-12"
         >
-          <p className="text-sm font-medium text-cyan-glow">{profile.handle}</p>
-          <h3 className="mt-2 text-2xl font-semibold text-starlight">{profile.name}</h3>
+          <Astronaut
+            size={80}
+            pose="wave"
+            className="absolute -right-6 -top-10 hidden sm:block"
+          />
+
+          <p className="font-mono text-sm font-medium text-cyan-glow">{profile.handle}</p>
+          <h3 className="mt-2 text-2xl font-bold text-starlight">{profile.name}</h3>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             {socials.map((social) => (
@@ -35,7 +42,7 @@ export default function Contact() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="glass-panel glass-panel-hover flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-starlight/80 hover:text-starlight"
+                className="btn-bubble glass-panel glass-panel-hover flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-starlight/80 hover:text-starlight"
               >
                 <SocialIcon icon={social.icon} size={16} />
                 {social.label}

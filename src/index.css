@@ -56,23 +56,27 @@
 
 @layer components {
   .glass-panel {
-    @apply relative rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-xl shadow-panel;
+    @apply relative rounded-bubble border border-white/10 bg-white/[0.04] backdrop-blur-xl shadow-panel;
   }
 
   .glass-panel-hover {
-    @apply transition-all duration-300 hover:border-cyan-glow/30 hover:bg-white/[0.06];
+    @apply transition-all duration-300 ease-out hover:-translate-y-1 hover:border-cyan-glow/30 hover:bg-white/[0.06];
   }
 
   .section-shell {
-    @apply relative mx-auto w-full max-w-6xl px-6 sm:px-8 lg:px-10;
+    @apply relative mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12;
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-cyan-glow/90;
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-cyan-glow/90;
   }
 
   .text-gradient {
     @apply bg-gradient-to-r from-cyan-glow via-starlight to-violet-glow bg-clip-text text-transparent;
+  }
+
+  .btn-bubble {
+    @apply rounded-[999px] transition-all duration-300 ease-out hover:-translate-y-0.5 active:translate-y-0 active:scale-95;
   }
 }
 

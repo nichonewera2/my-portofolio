@@ -21,11 +21,19 @@ export default {
           glow: '#a78bfa',
           deep: '#7c3aed',
         },
+        amber: {
+          glow: '#fbbf7d',
+        },
         starlight: '#e6ecff',
       },
       fontFamily: {
-        display: ['"Space Grotesk"', 'sans-serif'],
-        body: ['"Manrope"', 'sans-serif'],
+        display: ['"Baloo 2"', '"Plus Jakarta Sans"', 'sans-serif'],
+        body: ['"Plus Jakarta Sans"', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+      },
+      borderRadius: {
+        bubble: '2rem',
+        'bubble-lg': '2.75rem',
       },
       backgroundImage: {
         'nebula-1':
@@ -46,9 +54,12 @@ export default {
         'spin-reverse': 'spin-reverse 60s linear infinite',
         float: 'float 6s ease-in-out infinite',
         'float-slow': 'float 10s ease-in-out infinite',
+        'float-astro': 'float-astro 7s ease-in-out infinite',
+        'bob-rotate': 'bob-rotate 8s ease-in-out infinite',
         twinkle: 'twinkle 4s ease-in-out infinite',
         'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
         drift: 'drift 30s linear infinite',
+        shoot: 'shoot 5.5s linear infinite',
       },
       keyframes: {
         'spin-reverse': {
@@ -58,6 +69,15 @@ export default {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-14px)' },
+        },
+        'float-astro': {
+          '0%, 100%': { transform: 'translateY(0px) rotate(-4deg)' },
+          '50%': { transform: 'translateY(-20px) rotate(3deg)' },
+        },
+        'bob-rotate': {
+          '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+          '33%': { transform: 'translateY(-10px) rotate(2deg)' },
+          '66%': { transform: 'translateY(6px) rotate(-2deg)' },
         },
         twinkle: {
           '0%, 100%': { opacity: 0.2 },
@@ -70,6 +90,12 @@ export default {
         drift: {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-50%)' },
+        },
+        shoot: {
+          '0%': { transform: 'translate(0, 0)', opacity: 0 },
+          '4%': { opacity: 1 },
+          '18%': { transform: 'translate(-320px, 180px)', opacity: 0 },
+          '100%': { transform: 'translate(-320px, 180px)', opacity: 0 },
         },
       },
     },

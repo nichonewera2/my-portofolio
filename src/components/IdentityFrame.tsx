@@ -43,7 +43,7 @@ export default function IdentityFrame() {
         </motion.div>
       </button>
 
-      <span className="absolute -bottom-9 left-1/2 -translate-x-1/2 whitespace-nowrap text-[11px] font-medium uppercase tracking-[0.2em] text-starlight/40">
+      <span className="absolute -bottom-9 left-1/2 -translate-x-1/2 whitespace-nowrap font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-starlight/40">
         tap to rotate
       </span>
     </div>
@@ -52,7 +52,7 @@ export default function IdentityFrame() {
 
 function FrameFace({ src, label }: { src: string; label: string }) {
   return (
-    <div className="relative h-full w-full overflow-hidden rounded-[28px] border border-white/15 bg-navy shadow-panel">
+    <div className="relative h-full w-full overflow-hidden rounded-[36px] border border-white/15 bg-navy shadow-panel">
       <img
         src={src}
         alt="Nicholas Orlando Hutajulu"
@@ -72,7 +72,7 @@ function FrameFace({ src, label }: { src: string; label: string }) {
       )}
 
       <div className="absolute bottom-3 left-3 rounded-md bg-void/60 px-2 py-1 backdrop-blur-sm">
-        <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-cyan-glow">
+        <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-cyan-glow">
           {label}
         </span>
       </div>

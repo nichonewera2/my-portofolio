@@ -19,15 +19,15 @@ export default function ProjectCard({ project, index }: { project: Project; inde
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.55, ease: 'easeOut', delay: index * 0.08 }}
       className={cn(
-        'glass-panel group relative flex h-full flex-col rounded-3xl p-7 transition-shadow duration-300',
+        'glass-panel glass-panel-hover group relative flex h-full flex-col rounded-bubble p-7 transition-shadow duration-300',
         accentGlow,
       )}
     >
       <div className="flex items-start justify-between gap-3">
-        <h3 className="text-xl font-semibold text-starlight">{project.title}</h3>
+        <h3 className="font-display text-xl font-bold text-starlight">{project.title}</h3>
         <span
           className={cn(
-            'shrink-0 rounded-full border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider',
+            'shrink-0 rounded-full border px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider',
             statusStyles[project.status],
           )}
         >
@@ -43,7 +43,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
         {project.tags.map((tag) => (
           <span
             key={tag}
-            className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 text-[11px] text-starlight/55"
+            className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 font-mono text-[11px] text-starlight/55"
           >
             {tag}
           </span>
