@@ -22,7 +22,6 @@ export default function Projects() {
         <SectionHeading
           eyebrow="Mission Log"
           title="Projects"
-          titleClassName="font-bubble1 tracking-wide"
           description="Small builds and bigger experiments — each one a step further into the universe of code."
         />
 

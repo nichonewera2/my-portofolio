@@ -12,8 +12,8 @@
   font-display: swap;
 }
 @font-face {
-  font-family: 'Chewy Inside';
-  src: url('./assets/fonts/ChewyInside.ttf') format('truetype');
+  font-family: 'Chewy Outside';
+  src: url('./assets/fonts/ChewyOutside.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -25,14 +25,6 @@
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: 'Super Bubble';
-  src: url('./assets/fonts/SuperBubble.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 @layer base {
   :root {
     color-scheme: dark;

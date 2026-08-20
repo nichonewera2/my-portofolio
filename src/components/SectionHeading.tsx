@@ -27,7 +27,7 @@ export default function SectionHeading({
       <span className="eyebrow">{eyebrow}</span>
       <h2
         className={cn(
-          'mt-4 text-3xl font-bold text-starlight sm:text-4xl',
+          'mt-4 text-3xl font-bold text-starlight sm:text-4xl font-bubble1 tracking-wide',
           titleClassName,
         )}
       >
