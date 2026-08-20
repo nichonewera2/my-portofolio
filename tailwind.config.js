@@ -4,11 +4,16 @@ export default {
   theme: {
     extend: {
       colors: {
+        // void / starlight / hairline / surface read from CSS variables so the
+        // whole site can flip between dark-space and day-sky themes by toggling
+        // one `data-theme` attribute on <html> — see index.css for the values.
         void: {
-          DEFAULT: '#05060d',
-          soft: '#0a0d1a',
-          deep: '#020308',
+          DEFAULT: 'rgb(var(--c-void) / <alpha-value>)',
+          soft: 'rgb(var(--c-void-soft) / <alpha-value>)',
+          deep: 'rgb(var(--c-void-deep) / <alpha-value>)',
         },
+        hairline: 'rgb(var(--c-hairline) / <alpha-value>)',
+        surface: 'rgb(var(--c-surface) / <alpha-value>)',
         navy: {
           DEFAULT: '#0d1226',
           light: '#141b36',
@@ -33,7 +38,7 @@ export default {
           uranus: '#8fd8d0',
           neptune: '#5470e0',
         },
-        starlight: '#e6ecff',
+        starlight: 'rgb(var(--c-starlight) / <alpha-value>)',
       },
       fontFamily: {
         display: ['"Unbounded"', '"Outfit"', 'sans-serif'],

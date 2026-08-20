@@ -5,10 +5,31 @@
 @layer base {
   :root {
     color-scheme: dark;
+
+    /* Dark "deep space" theme — default. Values are R G B triplets consumed
+       by Tailwind's rgb(var(--x) / <alpha-value>) pattern. */
+    --c-void: 5 6 13;
+    --c-void-soft: 10 13 26;
+    --c-void-deep: 2 3 8;
+    --c-starlight: 230 236 255;
+    --c-hairline: 255 255 255;
+    --c-surface: 255 255 255;
+  }
+
+  html[data-theme='light'] {
+    color-scheme: light;
+
+    /* Light "day sky" theme — soft overcast blue-white with navy ink text. */
+    --c-void: 238 241 251;
+    --c-void-soft: 255 255 255;
+    --c-void-deep: 219 226 245;
+    --c-starlight: 17 22 44;
+    --c-hairline: 17 22 44;
+    --c-surface: 17 22 44;
   }
 
   * {
-    @apply border-white/10;
+    @apply border-hairline/10;
   }
 
   html {
@@ -32,6 +53,7 @@
   body {
     @apply bg-void text-starlight font-body antialiased;
     overflow-x: hidden;
+    transition: background-color 0.5s ease, color 0.5s ease;
   }
 
   h1,
@@ -42,8 +64,8 @@
   }
 
   ::selection {
-    background: rgba(94, 234, 212, 0.3);
-    color: #f5f7ff;
+    background: rgba(94, 234, 212, 0.35);
+    color: #05060d;
   }
 
   /* Visible, on-brand keyboard focus ring */
@@ -52,15 +74,24 @@
     outline-offset: 3px;
     border-radius: 4px;
   }
+
+  /* Hide the native cursor only once CustomCursor confirms a fine pointer
+     is present and motion isn't reduced — see CustomCursor.tsx. Applied on
+     <html> rather than a broad selector so form fields, iframes, etc. never
+     lose their cursor unexpectedly if the toggle logic changes later. */
+  html.custom-cursor-active,
+  html.custom-cursor-active * {
+    cursor: none !important;
+  }
 }
 
 @layer components {
   .glass-panel {
-    @apply relative rounded-bubble border border-white/10 bg-white/[0.04] backdrop-blur-xl shadow-panel;
+    @apply relative rounded-bubble border border-hairline/10 bg-surface/[0.04] backdrop-blur-xl shadow-panel transition-colors duration-500;
   }
 
   .glass-panel-hover {
-    @apply transition-all duration-300 ease-out hover:-translate-y-1 hover:border-cyan-glow/30 hover:bg-white/[0.06];
+    @apply transition-all duration-300 ease-out hover:-translate-y-1 hover:border-cyan-glow/30 hover:bg-surface/[0.07];
   }
 
   .section-shell {
@@ -68,7 +99,7 @@
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-cyan-glow/90;
+    @apply inline-flex items-center gap-2 rounded-full border border-hairline/10 bg-surface/[0.03] px-3.5 py-1.5 font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-cyan-glow/90;
   }
 
   .text-gradient {

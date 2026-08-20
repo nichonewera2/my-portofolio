@@ -34,7 +34,7 @@ export default function Stats() {
                     <span className="font-medium text-starlight/85">{lang.name}</span>
                     <span className="font-mono text-starlight/50">{lang.percent}%</span>
                   </div>
-                  <div className="h-2.5 w-full overflow-hidden rounded-full bg-white/[0.06]">
+                  <div className="h-2.5 w-full overflow-hidden rounded-full bg-surface/[0.08]">
                     <motion.div
                       initial={{ width: 0 }}
                       whileInView={{ width: `${lang.percent}%` }}

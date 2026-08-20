@@ -52,14 +52,14 @@ export default function IdentityFrame() {
 
 function FrameFace({ src, label }: { src: string; label: string }) {
   return (
-    <div className="relative h-full w-full overflow-hidden rounded-[36px] border border-white/15 bg-navy shadow-panel">
+    <div className="relative h-full w-full overflow-hidden rounded-[36px] border border-hairline/15 bg-navy shadow-panel">
       <img
         src={src}
         alt="Nicholas Orlando Hutajulu"
         className="h-full w-full object-cover"
         draggable={false}
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-void via-transparent to-cyan-glow/10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-cyan-glow/10" />
 
       {/* Corner brackets */}
       {(['top-2 left-2 border-l border-t', 'top-2 right-2 border-r border-t', 'bottom-2 left-2 border-l border-b', 'bottom-2 right-2 border-r border-b'] as const).map(
@@ -71,7 +71,7 @@ function FrameFace({ src, label }: { src: string; label: string }) {
         ),
       )}
 
-      <div className="absolute bottom-3 left-3 rounded-md bg-void/60 px-2 py-1 backdrop-blur-sm">
+      <div className="absolute bottom-3 left-3 rounded-md bg-black/60 px-2 py-1 backdrop-blur-sm">
         <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-cyan-glow">
           {label}
         </span>

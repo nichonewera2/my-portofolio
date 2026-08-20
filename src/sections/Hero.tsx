@@ -70,7 +70,7 @@ export default function Hero() {
               onClick={() =>
                 document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
               }
-              className="btn-bubble bg-cyan-glow px-8 py-3.5 text-sm font-bold text-void shadow-glow hover:shadow-[0_0_55px_-4px_rgba(94,234,212,0.6)]"
+              className="btn-bubble bg-cyan-glow px-8 py-3.5 text-sm font-bold text-[#05060d] shadow-glow hover:shadow-[0_0_55px_-4px_rgba(94,234,212,0.6)]"
             >
               View Projects
             </button>

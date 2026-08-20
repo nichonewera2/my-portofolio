@@ -2,17 +2,25 @@ import StarField from '@/components/StarField'
 import Nebula from '@/components/Nebula'
 import Navbar from '@/components/Navbar'
 import AudioPlayer from '@/components/AudioPlayer'
+import CustomCursor from '@/components/CustomCursor'
+import ScrollProgress from '@/components/ScrollProgress'
+import LoadingScreen from '@/components/LoadingScreen'
 import Hero from '@/sections/Hero'
 import About from '@/sections/About'
 import Projects from '@/sections/Projects'
 import Skills from '@/sections/Skills'
+import Timeline from '@/sections/Timeline'
 import Favorites from '@/sections/Favorites'
+import Testimonials from '@/sections/Testimonials'
 import Stats from '@/sections/Stats'
 import Contact from '@/sections/Contact'
 
 function App() {
   return (
     <div className="relative min-h-screen">
+      <LoadingScreen />
+      <CustomCursor />
+      <ScrollProgress />
       <StarField />
       <Nebula />
       <div className="pointer-events-none fixed inset-0 z-0 bg-grid-overlay bg-[size:64px_64px] opacity-30" />
@@ -24,7 +32,9 @@ function App() {
           <About />
           <Projects />
           <Skills />
+          <Timeline />
           <Favorites />
+          <Testimonials />
           <Stats />
           <Contact />
         </main>

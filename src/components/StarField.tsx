@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { useReducedMotion } from '@/hooks/useReducedMotion'
+import { useTheme } from '@/context/ThemeContext'
 
 type Star = {
   x: number
@@ -19,6 +20,8 @@ type Star = {
 export default function StarField() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const reducedMotion = useReducedMotion()
+  const { theme } = useTheme()
+  const dotRgb = theme === 'light' ? '25, 32, 58' : '230, 236, 255'
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -71,7 +74,7 @@ export default function StarField() {
       stars.forEach((star) => {
         ctx.beginPath()
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(230, 236, 255, ${star.baseAlpha})`
+        ctx.fillStyle = `rgba(${dotRgb}, ${star.baseAlpha})`
         ctx.fill()
       })
       return () => window.removeEventListener('resize', resize)
@@ -92,7 +95,7 @@ export default function StarField() {
 
         ctx.beginPath()
         ctx.arc(star.x, y, star.radius, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(230, 236, 255, ${Math.max(0, Math.min(1, twinkle))})`
+        ctx.fillStyle = `rgba(${dotRgb}, ${Math.max(0, Math.min(1, twinkle))})`
         ctx.fill()
       }
 
@@ -105,7 +108,7 @@ export default function StarField() {
       window.removeEventListener('resize', resize)
       cancelAnimationFrame(animationId)
     }
-  }, [reducedMotion])
+  }, [reducedMotion, dotRgb])
 
   return (
     <canvas

@@ -1,0 +1,41 @@
+{
+  "name": "Nicholas Orlando Hutajulu — Digital Universe",
+  "short_name": "N. Orlando",
+  "description": "Portofolio interaktif bertema galaksi milik Nicholas Orlando Hutajulu, pengembang pemula.",
+  "start_url": "/?source=pwa",
+  "id": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#05060d",
+  "theme_color": "#05060d",
+  "lang": "id",
+  "dir": "ltr",
+  "categories": ["portfolio", "developer", "personal"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

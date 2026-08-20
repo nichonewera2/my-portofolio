@@ -27,7 +27,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
       {/* Cover image — 3:2 landscape */}
       <div
         className={cn(
-          'relative aspect-[3/2] w-full overflow-hidden border-b border-white/10 transition-colors duration-300',
+          'relative aspect-[3/2] w-full overflow-hidden border-b border-hairline/10 transition-colors duration-300',
           accentBorder,
         )}
       >
@@ -37,7 +37,8 @@ export default function ProjectCard({ project, index }: { project: Project; inde
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           draggable={false}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-void/70 via-transparent to-transparent" />
+        {/* Fixed dark vignette — the image needs darkening regardless of site theme */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
         <span
           className={cn(
             'absolute right-3 top-3 rounded-full border px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider backdrop-blur-sm',
@@ -59,7 +60,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 font-mono text-[11px] text-starlight/55"
+              className="rounded-full border border-hairline/10 bg-surface/[0.03] px-2.5 py-1 font-mono text-[11px] text-starlight/55"
             >
               {tag}
             </span>
@@ -67,7 +68,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
         </div>
 
         {(project.link || project.codeLink) && (
-          <div className="mt-6 flex items-center gap-4 border-t border-white/10 pt-5">
+          <div className="mt-6 flex items-center gap-4 border-t border-hairline/10 pt-5">
             {project.link && (
               <a
                 href={project.link}

@@ -45,7 +45,7 @@ export default function AudioPlayer() {
         disabled={!ready}
         aria-label={playing ? 'Pause ambient music' : 'Play ambient music'}
         aria-pressed={playing}
-        className="glass-panel group relative flex h-14 w-14 items-center justify-center rounded-full border-white/15 shadow-panel transition-transform hover:scale-105 active:scale-95 disabled:cursor-not-allowed disabled:opacity-40"
+        className="glass-panel group relative flex h-14 w-14 items-center justify-center rounded-full border-hairline/15 shadow-panel transition-transform hover:scale-105 active:scale-95 disabled:cursor-not-allowed disabled:opacity-40"
       >
         {/* orbiting ring, only spins while playing */}
         <motion.span
