@@ -1,21 +1,3 @@
 {
-  "projects": [
-    {
-      "id": "tr4llify-studio-73fe54",
-      "title": "Tr4llify Studio",
-      "description": "Tr4llifyStudio adalah platform musik gratis tanpa iklan dengan pengalaman mendengarkan yang nyaman. Nikmati musik favoritmu dengan fitur equalizer, kontrol audio, dan berbagai fitur lainnya untuk membuat pengalaman musik jadi lebih personal. 🎵",
-      "tags": [
-        "PostgreSQL",
-        "Docker",
-        "Framer Motion",
-        "Git"
-      ],
-      "status": "Live",
-      "accent": "violet",
-      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/tr4llify-studio-73fe54.jpg",
-      "link": "https://tr4llifystudio.my.id",
-      "codeLink": "",
-      "addedAt": "2026-08-20T23:12:40.210031Z"
-    }
-  ]
+  "projects": []
 }
