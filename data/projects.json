@@ -1,24 +1,6 @@
 {
   "projects": [
     {
-      "id": "sitelens",
-      "title": "Tr4llify Studio",
-      "description": "Tr4llifyStudio adalah platform musik gratis tanpa iklan dengan pengalaman mendengarkan yang nyaman. Nikmati musik favoritmu dengan fitur equalizer, kontrol audio, dan berbagai fitur lainnya untuk membuat pengalaman musik jadi lebih personal. 🎵",
-      "tags": [
-        "Docker",
-        "TypeScript",
-        "Framer Motion",
-        "React",
-        "Laravel"
-      ],
-      "status": "Live",
-      "accent": "cyan",
-      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/sitelens.jpg?v=a8456d",
-      "link": "https://tr4llifystudio.my.id",
-      "codeLink": "",
-      "addedAt": "2026-06-01T09:00:00.000Z"
-    },
-    {
       "id": "digital-universe",
       "title": "Nicholas' Digital Universe",
       "description": "This very portfolio — a cinematic, space-themed site built to push my skills in animation, layout systems, and interactive design beyond a basic template.",
