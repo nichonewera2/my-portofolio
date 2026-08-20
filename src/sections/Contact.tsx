@@ -3,19 +3,24 @@ import SectionHeading from '@/components/SectionHeading'
 import SocialIcon from '@/components/SocialIcon'
 import Planet from '@/components/Planet'
 import Astronaut from '@/components/Astronaut'
+import Spaceship from '@/components/Spaceship'
+import Asteroid from '@/components/Asteroid'
 import { socials } from '@/data/socials'
 import { profile } from '@/data/profile'
 
 export default function Contact() {
   return (
     <section id="contact" className="relative overflow-hidden py-24 sm:py-32">
-      <Planet size={70} hue="violet" className="absolute right-6 top-10 hidden lg:block" />
+      <Planet size={70} hue="violet" variant="saturn" className="absolute right-6 top-10 hidden lg:block" />
+      <Planet size={46} hue="cyan" variant="moon" className="absolute left-8 bottom-16 hidden lg:block" />
+      <Spaceship size={54} tilt={-45} className="absolute left-[10%] top-6 hidden lg:block" />
+      <Asteroid size={20} className="absolute right-[22%] bottom-8 hidden lg:block" />
 
       <div className="section-shell">
         <SectionHeading
-          eyebrow="Open Channel"
-          title="Let's Connect"
-          description="Have a project, an idea, or just want to say hi? Reach out through any of these channels."
+          eyebrow="Saluran Terbuka"
+          title="Mari Terhubung"
+          description="Punya proyek, ide, atau cuma mau say hi? Hubungi aku lewat salah satu channel di bawah ini."
           align="center"
         />
 
@@ -52,7 +57,7 @@ export default function Contact() {
         </motion.div>
 
         <p className="mt-16 text-center text-xs text-starlight/30">
-          © {new Date().getFullYear()} {profile.name}. Built with curiosity, one commit at a time.
+          © {new Date().getFullYear()} {profile.name}. Dibangun dengan rasa penasaran, satu commit setiap kali.
         </p>
       </div>
     </section>

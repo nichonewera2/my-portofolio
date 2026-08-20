@@ -20,5 +20,5 @@
   <circle cx="150" cy="480" r="46" fill="#141b36" stroke="#a78bfa" stroke-opacity="0.4"/>
   <text x="90" y="300" font-family="Space Grotesk, sans-serif" font-size="60" font-weight="700" fill="#f5f7ff">Nicholas Orlando</text>
   <text x="90" y="370" font-family="Space Grotesk, sans-serif" font-size="60" font-weight="700" fill="#f5f7ff">Hutajulu</text>
-  <text x="90" y="430" font-family="Manrope, sans-serif" font-size="28" fill="url(#txt)">Beginner Developer · Digital Universe</text>
+  <text x="90" y="430" font-family="Sora, sans-serif" font-size="28" fill="url(#txt)">Pengembang Pemula · Digital Universe</text>
 </svg>

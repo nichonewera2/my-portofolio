@@ -5,12 +5,13 @@ import type { Project } from '@/data/projects'
 
 const statusStyles: Record<Project['status'], string> = {
   Live: 'bg-emerald-400/10 text-emerald-300 border-emerald-400/20',
-  'In Progress': 'bg-amber-400/10 text-amber-300 border-amber-400/20',
-  Prototype: 'bg-sky-400/10 text-sky-300 border-sky-400/20',
+  Dikerjakan: 'bg-amber-400/10 text-amber-300 border-amber-400/20',
+  Prototipe: 'bg-sky-400/10 text-sky-300 border-sky-400/20',
 }
 
 export default function ProjectCard({ project, index }: { project: Project; index: number }) {
   const accentGlow = project.accent === 'cyan' ? 'hover:shadow-glow' : 'hover:shadow-glow-violet'
+  const accentBorder = project.accent === 'cyan' ? 'group-hover:border-cyan-glow/40' : 'group-hover:border-violet-glow/40'
 
   return (
     <motion.article
@@ -19,15 +20,27 @@ export default function ProjectCard({ project, index }: { project: Project; inde
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.55, ease: 'easeOut', delay: index * 0.08 }}
       className={cn(
-        'glass-panel glass-panel-hover group relative flex h-full flex-col rounded-bubble p-7 transition-shadow duration-300',
+        'glass-panel glass-panel-hover group relative flex h-full flex-col overflow-hidden rounded-bubble transition-shadow duration-300',
         accentGlow,
       )}
     >
-      <div className="flex items-start justify-between gap-3">
-        <h3 className="font-display text-xl font-bold text-starlight">{project.title}</h3>
+      {/* Cover image — 3:2 landscape */}
+      <div
+        className={cn(
+          'relative aspect-[3/2] w-full overflow-hidden border-b border-white/10 transition-colors duration-300',
+          accentBorder,
+        )}
+      >
+        <img
+          src={project.cover}
+          alt={`Pratinjau proyek ${project.title}`}
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          draggable={false}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-void/70 via-transparent to-transparent" />
         <span
           className={cn(
-            'shrink-0 rounded-full border px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider',
+            'absolute right-3 top-3 rounded-full border px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider backdrop-blur-sm',
             statusStyles[project.status],
           )}
         >
@@ -35,45 +48,49 @@ export default function ProjectCard({ project, index }: { project: Project; inde
         </span>
       </div>
 
-      <p className="mt-3 flex-1 text-sm leading-relaxed text-starlight/60">
-        {project.description}
-      </p>
+      <div className="flex flex-1 flex-col p-7">
+        <h3 className="font-display text-xl font-bold text-starlight">{project.title}</h3>
 
-      <div className="mt-5 flex flex-wrap gap-2">
-        {project.tags.map((tag) => (
-          <span
-            key={tag}
-            className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 font-mono text-[11px] text-starlight/55"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
+        <p className="mt-3 flex-1 text-sm leading-relaxed text-starlight/60">
+          {project.description}
+        </p>
 
-      {(project.link || project.codeLink) && (
-        <div className="mt-6 flex items-center gap-4 border-t border-white/10 pt-5">
-          {project.link && (
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-cyan-glow transition-colors hover:text-cyan-bright"
+        <div className="mt-5 flex flex-wrap gap-2">
+          {project.tags.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 font-mono text-[11px] text-starlight/55"
             >
-              Visit <ArrowUpRight size={14} />
-            </a>
-          )}
-          {project.codeLink && (
-            <a
-              href={project.codeLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-starlight/60 transition-colors hover:text-starlight"
-            >
-              <Github size={14} /> Code
-            </a>
-          )}
+              {tag}
+            </span>
+          ))}
         </div>
-      )}
+
+        {(project.link || project.codeLink) && (
+          <div className="mt-6 flex items-center gap-4 border-t border-white/10 pt-5">
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-cyan-glow transition-colors hover:text-cyan-bright"
+              >
+                Kunjungi <ArrowUpRight size={14} />
+              </a>
+            )}
+            {project.codeLink && (
+              <a
+                href={project.codeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-starlight/60 transition-colors hover:text-starlight"
+              >
+                <Github size={14} /> Kode
+              </a>
+            )}
+          </div>
+        )}
+      </div>
     </motion.article>
   )
 }

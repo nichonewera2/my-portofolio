@@ -3,6 +3,10 @@ import { ArrowDown, Sparkles } from 'lucide-react'
 import IdentityFrame from '@/components/IdentityFrame'
 import Planet from '@/components/Planet'
 import Astronaut from '@/components/Astronaut'
+import Spaceship from '@/components/Spaceship'
+import Ufo from '@/components/Ufo'
+import Satellite from '@/components/Satellite'
+import Asteroid from '@/components/Asteroid'
 import ShootingStar from '@/components/ShootingStar'
 import { profile } from '@/data/profile'
 
@@ -12,10 +16,17 @@ export default function Hero() {
       id="home"
       className="relative flex min-h-screen items-center overflow-hidden pt-32 pb-24"
     >
-      <Planet size={100} hue="violet" className="absolute -left-10 top-32 hidden lg:block" />
-      <Planet size={64} hue="cyan" className="absolute right-16 bottom-28 hidden lg:block" />
+      <Planet size={100} hue="violet" variant="saturn" className="absolute -left-10 top-28 hidden lg:block" />
+      <Planet size={56} hue="cyan" variant="moon" className="absolute right-20 bottom-40 hidden lg:block" />
+      <Planet size={38} hue="amber" variant="plain" className="absolute left-[18%] bottom-16 hidden md:block" />
+      <Spaceship size={70} tilt={-30} className="absolute right-[8%] top-24 hidden lg:block" />
+      <Ufo size={80} className="absolute left-[6%] top-40 hidden lg:block" />
+      <Satellite size={60} className="absolute right-[20%] top-16 hidden md:block" />
+      <Asteroid size={26} className="absolute left-[30%] top-20 hidden lg:block" />
+      <Asteroid size={18} className="absolute right-[38%] bottom-24 hidden lg:block" />
       <ShootingStar top="18%" left="78%" delay="0.5s" />
       <ShootingStar top="55%" left="8%" delay="3.2s" />
+      <ShootingStar top="30%" left="45%" delay="6s" />
 
       <div className="section-shell grid grid-cols-1 items-center gap-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
         <motion.div
@@ -50,7 +61,7 @@ export default function Hero() {
               }
               className="btn-bubble bg-cyan-glow px-8 py-3.5 text-sm font-bold text-void shadow-glow hover:shadow-[0_0_50px_-6px_rgba(94,234,212,0.55)]"
             >
-              View Projects
+              Lihat Proyek
             </button>
             <button
               onClick={() =>
@@ -58,7 +69,7 @@ export default function Hero() {
               }
               className="btn-bubble glass-panel px-8 py-3.5 text-sm font-bold text-starlight hover:border-violet-glow/40"
             >
-              Get in Touch
+              Hubungi Aku
             </button>
           </div>
         </motion.div>

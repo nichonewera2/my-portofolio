@@ -27,8 +27,8 @@ export default {
         starlight: '#e6ecff',
       },
       fontFamily: {
-        display: ['"Baloo 2"', '"Plus Jakarta Sans"', 'sans-serif'],
-        body: ['"Plus Jakarta Sans"', 'sans-serif'],
+        display: ['"Fredoka"', '"Sora"', 'sans-serif'],
+        body: ['"Sora"', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
       },
       borderRadius: {

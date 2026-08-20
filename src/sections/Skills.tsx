@@ -1,15 +1,20 @@
 import { motion } from 'framer-motion'
 import SectionHeading from '@/components/SectionHeading'
+import Satellite from '@/components/Satellite'
+import Planet from '@/components/Planet'
 import { skillGroups } from '@/data/skills'
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative py-24 sm:py-32">
+    <section id="skills" className="relative overflow-hidden py-24 sm:py-32">
+      <Satellite size={64} className="absolute right-6 top-10 hidden lg:block" />
+      <Planet size={40} hue="cyan" variant="plain" className="absolute left-4 bottom-16 hidden lg:block" />
+
       <div className="section-shell">
         <SectionHeading
-          eyebrow="Systems Onboard"
-          title="Skills & Tools"
-          description="The technologies I use to bring ideas from concept to something that runs in a browser."
+          eyebrow="Sistem Onboard"
+          title="Skill & Tools"
+          description="Teknologi yang aku pakai untuk mewujudkan ide dari konsep sampai jadi sesuatu yang benar-benar jalan di browser."
         />
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">

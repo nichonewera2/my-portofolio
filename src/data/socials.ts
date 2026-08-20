@@ -5,7 +5,7 @@ export type SocialLink = {
   icon: 'whatsapp' | 'telegram' | 'instagram' | 'github'
 }
 
-// Replace the href values below with your real links/numbers.
+// Ganti nilai href di bawah ini dengan link/nomor asli kamu.
 export const socials: SocialLink[] = [
   {
     id: 'whatsapp',

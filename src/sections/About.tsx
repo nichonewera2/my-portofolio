@@ -2,6 +2,9 @@ import { motion } from 'framer-motion'
 import { GraduationCap, Rocket } from 'lucide-react'
 import SectionHeading from '@/components/SectionHeading'
 import Astronaut from '@/components/Astronaut'
+import Ufo from '@/components/Ufo'
+import Planet from '@/components/Planet'
+import Asteroid from '@/components/Asteroid'
 import { profile } from '@/data/profile'
 
 export default function About() {
@@ -12,12 +15,15 @@ export default function About() {
         pose="float"
         className="absolute -right-2 top-8 hidden opacity-90 md:block"
       />
+      <Ufo size={64} className="absolute left-2 bottom-24 hidden lg:block" />
+      <Planet size={44} hue="amber" variant="moon" className="absolute left-[42%] -top-4 hidden lg:block" />
+      <Asteroid size={22} className="absolute right-[30%] bottom-10 hidden lg:block" />
 
       <div className="section-shell">
         <SectionHeading
-          eyebrow="Transmission Log"
-          title="About Me"
-          description="A quick look at who I am and where I'm headed."
+          eyebrow="Log Transmisi"
+          title="Tentang Aku"
+          description="Sekilas cerita tentang siapa aku dan ke mana arah tujuanku."
         />
 
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.3fr_1fr]">
@@ -47,7 +53,7 @@ export default function About() {
                 <GraduationCap size={20} />
               </div>
               <p className="mt-4 font-mono text-xs font-medium uppercase tracking-[0.18em] text-starlight/40">
-                Education
+                Pendidikan
               </p>
               <p className="mt-1 text-lg font-semibold text-starlight">{profile.education}</p>
             </div>
@@ -57,10 +63,10 @@ export default function About() {
                 <Rocket size={20} />
               </div>
               <p className="mt-4 font-mono text-xs font-medium uppercase tracking-[0.18em] text-starlight/40">
-                Mission
+                Misi
               </p>
               <p className="mt-1 text-lg font-semibold text-starlight">
-                Learn something new, ship something small — every week.
+                Belajar hal baru, rilis sesuatu yang kecil — setiap minggu.
               </p>
             </div>
           </motion.div>

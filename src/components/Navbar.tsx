@@ -5,11 +5,11 @@ import { useActiveSection } from '@/hooks/useActiveSection'
 import { cn } from '@/lib/utils'
 
 const NAV_ITEMS = [
-  { id: 'home', label: 'Home' },
-  { id: 'about', label: 'About' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'skills', label: 'Skills' },
-  { id: 'contact', label: 'Contact' },
+  { id: 'home', label: 'Beranda' },
+  { id: 'about', label: 'Tentang' },
+  { id: 'projects', label: 'Proyek' },
+  { id: 'skills', label: 'Skill' },
+  { id: 'contact', label: 'Kontak' },
 ]
 
 export default function Navbar() {
@@ -73,7 +73,7 @@ export default function Navbar() {
         <button
           onClick={() => setOpen((v) => !v)}
           className="glass-panel flex h-10 w-10 items-center justify-center rounded-full md:hidden"
-          aria-label={open ? 'Close menu' : 'Open menu'}
+          aria-label={open ? 'Tutup menu' : 'Buka menu'}
           aria-expanded={open}
         >
           {open ? <X size={18} /> : <Menu size={18} />}
