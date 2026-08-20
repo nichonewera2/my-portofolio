@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
-import { ArrowUpRight, Github } from 'lucide-react'
+import { ArrowUpRight, Github, Clock } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import type { Project } from '@/data/projects'
+import TimeAgo from '@/components/TimeAgo'
 
 const statusStyles: Record<Project['status'], string> = {
   Live: 'bg-emerald-400/10 text-emerald-300 border-emerald-400/20',
@@ -39,14 +40,20 @@ export default function ProjectCard({ project, index }: { project: Project; inde
         />
         {/* Fixed dark vignette — the image needs darkening regardless of site theme */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-        <span
-          className={cn(
-            'absolute right-3 top-3 rounded-full border px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider backdrop-blur-sm',
-            statusStyles[project.status],
-          )}
-        >
-          {project.status}
-        </span>
+        <div className="absolute right-3 top-3 flex flex-col items-end gap-1.5">
+          <span
+            className={cn(
+              'rounded-full border px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider backdrop-blur-sm',
+              statusStyles[project.status],
+            )}
+          >
+            {project.status}
+          </span>
+          <span className="inline-flex items-center gap-1 rounded-full border border-white/15 bg-black/50 px-2 py-0.5 font-mono text-[10px] text-white/70 backdrop-blur-sm">
+            <Clock size={10} />
+            <TimeAgo iso={project.addedAt} />
+          </span>
+        </div>
       </div>
 
       <div className="flex flex-1 flex-col p-7">

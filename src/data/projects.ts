@@ -8,12 +8,22 @@ export type Project = {
   codeLink?: string
   accent: 'cyan' | 'violet'
   cover: string
+  /** ISO 8601 timestamp — when the project was added. Powers the
+   *  "added X hours ago" label. Set automatically by the Telegram bot. */
+  addedAt: string
 }
 
 import sitelensCover from '@/assets/covers/sitelens-cover.jpg'
 import universeCover from '@/assets/covers/universe-cover.jpg'
 
-export const projects: Project[] = [
+/**
+ * Local fallback shown only if the live data fetch (see
+ * src/hooks/useProjects.ts) fails — e.g. no internet connection, or the
+ * data file hasn't been published yet. Keeps the section from ever
+ * rendering empty. The Telegram bot does NOT edit this file — it edits
+ * data/projects.json in the GitHub repo instead.
+ */
+export const FALLBACK_PROJECTS: Project[] = [
   {
     id: 'sitelens',
     title: 'SiteLens',
@@ -23,6 +33,7 @@ export const projects: Project[] = [
     status: 'In Progress',
     accent: 'cyan',
     cover: sitelensCover,
+    addedAt: '2026-06-01T09:00:00.000Z',
   },
   {
     id: 'digital-universe',
@@ -33,5 +44,7 @@ export const projects: Project[] = [
     status: 'Live',
     accent: 'violet',
     cover: universeCover,
+    codeLink: 'https://github.com/nichonewera2/my-portofolio',
+    addedAt: '2026-08-20T09:00:00.000Z',
   },
 ]
