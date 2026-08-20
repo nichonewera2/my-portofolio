@@ -2,6 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom title fonts — self-hosted, used only for specific section
+   headings per design request (see tailwind.config.js fontFamily). */
+@font-face {
+  font-family: 'Starbim';
+  src: url('./assets/fonts/Starbim.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Chewy Inside';
+  src: url('./assets/fonts/ChewyInside.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Bubble 1';
+  src: url('./assets/fonts/Bubble1.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Super Bubble';
+  src: url('./assets/fonts/SuperBubble.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     color-scheme: dark;

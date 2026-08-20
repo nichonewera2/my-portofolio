@@ -28,6 +28,7 @@ export default function About() {
         <SectionHeading
           eyebrow="Transmission Log"
           title="About Me"
+          titleClassName="font-chewy tracking-wide"
           description="A quick look at who I am and where I'm headed."
         />
 

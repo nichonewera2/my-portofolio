@@ -6,6 +6,7 @@ type SectionHeadingProps = {
   title: string
   description?: string
   align?: 'left' | 'center'
+  titleClassName?: string
 }
 
 export default function SectionHeading({
@@ -13,6 +14,7 @@ export default function SectionHeading({
   title,
   description,
   align = 'left',
+  titleClassName,
 }: SectionHeadingProps) {
   return (
     <motion.div
@@ -26,6 +28,7 @@ export default function SectionHeading({
       <h2
         className={cn(
           'mt-4 text-3xl font-bold text-starlight sm:text-4xl',
+          titleClassName,
         )}
       >
         {title}

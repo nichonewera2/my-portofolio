@@ -52,7 +52,8 @@ export default function Hero() {
           <h1 className="mt-6 text-[2.5rem] font-bold leading-[1.12] text-starlight sm:text-5xl lg:text-[3.6rem]">
             {profile.name.split(' ')[0]}{' '}
             <span className="text-gradient drop-shadow-[0_0_28px_rgba(94,234,212,0.35)]">
-              {profile.name.split(' ').slice(1).join(' ')}
+              {profile.name.split(' ').slice(1, -1).join(' ')}{' '}
+              <span className="font-starbim">{profile.name.split(' ').slice(-1)[0]}</span>
             </span>
           </h1>
 

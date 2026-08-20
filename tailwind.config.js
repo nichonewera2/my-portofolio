@@ -44,6 +44,10 @@ export default {
         display: ['"Unbounded"', '"Outfit"', 'sans-serif'],
         body: ['"Outfit"', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
+        starbim: ['"Starbim"', 'cursive'],
+        chewy: ['"Chewy Inside"', 'cursive'],
+        bubble1: ['"Bubble 1"', 'cursive'],
+        'super-bubble': ['"Super Bubble"', 'cursive'],
       },
       borderRadius: {
         bubble: '2rem',

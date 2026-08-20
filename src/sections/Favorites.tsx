@@ -20,6 +20,7 @@ export default function Favorites() {
         <SectionHeading
           eyebrow="Personal Frequency"
           title="On My Playlist"
+          titleClassName="font-super-bubble tracking-wide"
           description="A little bit of what keeps me company off-screen — the music on repeat and the show that never gets old."
         />
 
