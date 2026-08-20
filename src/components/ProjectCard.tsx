@@ -5,8 +5,8 @@ import type { Project } from '@/data/projects'
 
 const statusStyles: Record<Project['status'], string> = {
   Live: 'bg-emerald-400/10 text-emerald-300 border-emerald-400/20',
-  Dikerjakan: 'bg-amber-400/10 text-amber-300 border-amber-400/20',
-  Prototipe: 'bg-sky-400/10 text-sky-300 border-sky-400/20',
+  'In Progress': 'bg-amber-400/10 text-amber-300 border-amber-400/20',
+  Prototype: 'bg-sky-400/10 text-sky-300 border-sky-400/20',
 }
 
 export default function ProjectCard({ project, index }: { project: Project; index: number }) {
@@ -33,7 +33,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
       >
         <img
           src={project.cover}
-          alt={`Pratinjau proyek ${project.title}`}
+          alt={`${project.title} project preview`}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           draggable={false}
         />
@@ -49,7 +49,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
       </div>
 
       <div className="flex flex-1 flex-col p-7">
-        <h3 className="font-display text-xl font-bold text-starlight">{project.title}</h3>
+        <h3 className="font-display text-lg font-bold text-starlight">{project.title}</h3>
 
         <p className="mt-3 flex-1 text-sm leading-relaxed text-starlight/60">
           {project.description}
@@ -75,7 +75,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-sm font-medium text-cyan-glow transition-colors hover:text-cyan-bright"
               >
-                Kunjungi <ArrowUpRight size={14} />
+                Visit <ArrowUpRight size={14} />
               </a>
             )}
             {project.codeLink && (
@@ -85,7 +85,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-sm font-medium text-starlight/60 transition-colors hover:text-starlight"
               >
-                <Github size={14} /> Kode
+                <Github size={14} /> Code
               </a>
             )}
           </div>

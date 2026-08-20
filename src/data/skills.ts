@@ -7,22 +7,22 @@ export type SkillGroup = {
 export const skillGroups: SkillGroup[] = [
   {
     id: 'languages',
-    label: 'Bahasa Pemrograman',
+    label: 'Languages',
     items: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
   },
   {
     id: 'frameworks',
-    label: 'Framework & Library',
+    label: 'Frameworks & Libraries',
     items: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion'],
   },
   {
     id: 'tools',
-    label: 'Tools & Alur Kerja',
+    label: 'Tools & Workflow',
     items: ['Vite', 'Git', 'Vercel', 'VS Code'],
   },
   {
     id: 'learning',
-    label: 'Sedang Dipelajari',
-    items: ['Node.js', 'Integrasi API', 'Dasar-dasar UI/UX'],
+    label: 'Currently Learning',
+    items: ['Node.js', 'API integration', 'UI/UX fundamentals'],
   },
 ]

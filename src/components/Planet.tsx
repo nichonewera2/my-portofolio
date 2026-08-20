@@ -3,22 +3,27 @@ import { cn } from '@/lib/utils'
 type PlanetProps = {
   size?: number
   className?: string
-  hue?: 'cyan' | 'violet' | 'amber'
-  variant?: 'ring' | 'saturn' | 'moon' | 'plain'
+  hue?: 'cyan' | 'violet' | 'amber' | 'mars' | 'earth' | 'neptune'
+  variant?: 'ring' | 'saturn' | 'moon' | 'plain' | 'banded'
+}
+
+const HUE_GRADIENTS: Record<NonNullable<PlanetProps['hue']>, string> = {
+  cyan: 'from-cyan-glow/70 via-cyan-bright/40 to-navy',
+  violet: 'from-violet-glow/70 via-violet-deep/40 to-navy',
+  amber: 'from-amber-glow/70 via-amber-glow/30 to-navy',
+  mars: 'from-planet-mars/80 via-planet-mars/40 to-navy',
+  earth: 'from-planet-earth/80 via-cyan-glow/30 to-navy',
+  neptune: 'from-planet-neptune/80 via-violet-glow/30 to-navy',
 }
 
 /**
  * A decorative CSS/SVG planet with several visual variants: a simple ring
  * world, a Saturn-style banded planet with a wide flat ring, a cratered
- * moon, or a plain glowing sphere. Used generously as ambient set-dressing.
+ * moon, a Jupiter-like banded giant, or a plain glowing sphere. Used
+ * generously as ambient set-dressing across every section.
  */
 export default function Planet({ size = 120, className, hue = 'cyan', variant = 'ring' }: PlanetProps) {
-  const gradient =
-    hue === 'cyan'
-      ? 'from-cyan-glow/70 via-cyan-bright/40 to-navy'
-      : hue === 'violet'
-        ? 'from-violet-glow/70 via-violet-deep/40 to-navy'
-        : 'from-amber-glow/70 via-amber-glow/30 to-navy'
+  const gradient = HUE_GRADIENTS[hue]
 
   if (variant === 'moon') {
     return (
@@ -52,6 +57,23 @@ export default function Planet({ size = 120, className, hue = 'cyan', variant = 
           style={{ width: size * 1.6, height: size * 0.34, transform: 'translate(-50%, -50%) rotate(-16deg)' }}
         />
         <div className="absolute inset-[18%] rounded-full bg-gradient-to-br from-amber-glow/80 via-violet-glow/40 to-navy shadow-glow" />
+      </div>
+    )
+  }
+
+  if (variant === 'banded') {
+    return (
+      <div
+        aria-hidden="true"
+        className={cn('pointer-events-none relative animate-float-slow overflow-hidden rounded-full shadow-glow-violet', className)}
+        style={{
+          width: size,
+          height: size,
+          backgroundImage: `repeating-linear-gradient(4deg, #d9a06b, #d9a06b 12%, #c4835a 12%, #c4835a 20%, #e8bd8f 20%, #e8bd8f 30%)`,
+        }}
+      >
+        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-transparent via-transparent to-navy/60" />
+        <div className="absolute inset-0 rounded-full ring-1 ring-inset ring-white/10" />
       </div>
     )
   }

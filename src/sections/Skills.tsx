@@ -2,19 +2,26 @@ import { motion } from 'framer-motion'
 import SectionHeading from '@/components/SectionHeading'
 import Satellite from '@/components/Satellite'
 import Planet from '@/components/Planet'
+import Asteroid from '@/components/Asteroid'
+import { useParallax } from '@/hooks/useParallax'
 import { skillGroups } from '@/data/skills'
 
 export default function Skills() {
+  const { ref, y } = useParallax<HTMLDivElement>(35)
+
   return (
-    <section id="skills" className="relative overflow-hidden py-24 sm:py-32">
-      <Satellite size={64} className="absolute right-6 top-10 hidden lg:block" />
-      <Planet size={40} hue="cyan" variant="plain" className="absolute left-4 bottom-16 hidden lg:block" />
+    <section id="skills" ref={ref} className="relative overflow-hidden py-24 sm:py-32">
+      <motion.div style={{ y }} className="pointer-events-none absolute inset-0">
+        <Satellite size={64} className="absolute right-6 top-10 hidden lg:block" />
+        <Planet size={40} hue="cyan" variant="plain" className="absolute left-4 bottom-16 hidden lg:block" />
+        <Asteroid size={18} className="absolute right-[40%] top-4 hidden lg:block" />
+      </motion.div>
 
       <div className="section-shell">
         <SectionHeading
-          eyebrow="Sistem Onboard"
-          title="Skill & Tools"
-          description="Teknologi yang aku pakai untuk mewujudkan ide dari konsep sampai jadi sesuatu yang benar-benar jalan di browser."
+          eyebrow="Onboard Systems"
+          title="Skills & Tools"
+          description="The technologies I use to bring ideas from concept to something that runs in a browser."
         />
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -25,7 +32,7 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.5, ease: 'easeOut', delay: groupIndex * 0.08 }}
-              className="glass-panel glass-panel-hover rounded-bubble p-6"
+              className="glass-panel glass-panel-hover rounded-bubble p-6 hover:shadow-glow"
             >
               <p className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-violet-glow/80">
                 {group.label}

@@ -7,26 +7,35 @@ import Spaceship from '@/components/Spaceship'
 import Ufo from '@/components/Ufo'
 import Satellite from '@/components/Satellite'
 import Asteroid from '@/components/Asteroid'
-import ShootingStar from '@/components/ShootingStar'
+import Galaxy from '@/components/Galaxy'
+import Alien from '@/components/Alien'
+import MeteorShower from '@/components/MeteorShower'
+import { useParallax } from '@/hooks/useParallax'
 import { profile } from '@/data/profile'
 
 export default function Hero() {
+  const { ref, y } = useParallax<HTMLDivElement>(50)
+
   return (
     <section
       id="home"
+      ref={ref}
       className="relative flex min-h-screen items-center overflow-hidden pt-32 pb-24"
     >
-      <Planet size={100} hue="violet" variant="saturn" className="absolute -left-10 top-28 hidden lg:block" />
-      <Planet size={56} hue="cyan" variant="moon" className="absolute right-20 bottom-40 hidden lg:block" />
-      <Planet size={38} hue="amber" variant="plain" className="absolute left-[18%] bottom-16 hidden md:block" />
-      <Spaceship size={70} tilt={-30} className="absolute right-[8%] top-24 hidden lg:block" />
-      <Ufo size={80} className="absolute left-[6%] top-40 hidden lg:block" />
-      <Satellite size={60} className="absolute right-[20%] top-16 hidden md:block" />
-      <Asteroid size={26} className="absolute left-[30%] top-20 hidden lg:block" />
-      <Asteroid size={18} className="absolute right-[38%] bottom-24 hidden lg:block" />
-      <ShootingStar top="18%" left="78%" delay="0.5s" />
-      <ShootingStar top="55%" left="8%" delay="3.2s" />
-      <ShootingStar top="30%" left="45%" delay="6s" />
+      <motion.div style={{ y }} className="pointer-events-none absolute inset-0">
+        <Planet size={110} hue="violet" variant="saturn" className="absolute -left-10 top-24 hidden lg:block" />
+        <Planet size={56} hue="cyan" variant="moon" className="absolute right-24 bottom-40 hidden lg:block" />
+        <Planet size={40} hue="amber" variant="plain" className="absolute left-[16%] bottom-14 hidden md:block" />
+        <Planet size={64} hue="mars" variant="ring" className="absolute right-[4%] bottom-10 hidden lg:block" />
+        <Galaxy size={190} className="absolute -right-16 top-4 hidden xl:block" />
+        <Spaceship size={70} tilt={-30} className="absolute right-[10%] top-24 hidden lg:block" />
+        <Ufo size={82} className="absolute left-[5%] top-40 hidden lg:block" />
+        <Satellite size={60} className="absolute right-[22%] top-14 hidden md:block" />
+        <Alien size={46} className="absolute left-[26%] top-16 hidden lg:block" />
+        <Asteroid size={26} className="absolute left-[34%] top-28 hidden lg:block" />
+        <Asteroid size={18} className="absolute right-[38%] bottom-28 hidden lg:block" />
+      </motion.div>
+      <MeteorShower />
 
       <div className="section-shell grid grid-cols-1 items-center gap-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
         <motion.div
@@ -40,9 +49,11 @@ export default function Hero() {
             {profile.status}
           </span>
 
-          <h1 className="mt-6 text-[2.75rem] font-bold leading-[1.08] text-starlight sm:text-6xl lg:text-[4.2rem]">
+          <h1 className="mt-6 text-[2.5rem] font-bold leading-[1.12] text-starlight sm:text-5xl lg:text-[3.6rem]">
             {profile.name.split(' ')[0]}{' '}
-            <span className="text-gradient">{profile.name.split(' ').slice(1).join(' ')}</span>
+            <span className="text-gradient drop-shadow-[0_0_28px_rgba(94,234,212,0.35)]">
+              {profile.name.split(' ').slice(1).join(' ')}
+            </span>
           </h1>
 
           <p className="mt-4 flex items-center justify-center gap-2 text-lg font-semibold text-cyan-glow/90 lg:justify-start">
@@ -59,17 +70,17 @@ export default function Hero() {
               onClick={() =>
                 document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
               }
-              className="btn-bubble bg-cyan-glow px-8 py-3.5 text-sm font-bold text-void shadow-glow hover:shadow-[0_0_50px_-6px_rgba(94,234,212,0.55)]"
+              className="btn-bubble bg-cyan-glow px-8 py-3.5 text-sm font-bold text-void shadow-glow hover:shadow-[0_0_55px_-4px_rgba(94,234,212,0.6)]"
             >
-              Lihat Proyek
+              View Projects
             </button>
             <button
               onClick={() =>
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
               }
-              className="btn-bubble glass-panel px-8 py-3.5 text-sm font-bold text-starlight hover:border-violet-glow/40"
+              className="btn-bubble glass-panel px-8 py-3.5 text-sm font-bold text-starlight hover:border-violet-glow/50 hover:shadow-glow-violet"
             >
-              Hubungi Aku
+              Get in Touch
             </button>
           </div>
         </motion.div>

@@ -1,14 +1,14 @@
 export const profile = {
   name: 'Nicholas Orlando Hutajulu',
   handle: '@Nicholas.ofc',
-  role: 'Pengembang Pemula',
+  role: 'Beginner Developer',
   education: 'Methodist 2 Rantau Prapat',
   tagline:
-    'Menjelajahi dunia kode, menciptakan pengalaman digital, dan mengasah kemampuan satu proyek demi satu proyek.',
+    'Exploring code, creating digital experiences, and building my skills one project at a time.',
   bio: [
-    'Aku baru memulai perjalanan di dunia coding — belajar sambil membangun, mencoba, gagal, lalu mencari tahu lagi caranya sampai berhasil.',
-    'Setiap proyek di sini adalah langkah kecil: sebuah eksperimen, konsep baru, atau skill yang baru kupelajari di sepanjang jalan. Semesta ini tumbuh seiring aku berkembang.',
-    'Tanpa gelar palsu, tanpa jalan pintas — cuma rasa penasaran, konsistensi, dan kecintaan yang tulus untuk membangun sesuatu di layar.',
+    "I'm just getting started on my journey into code — learning by building, breaking things, and figuring out how they work again.",
+    'Every project here is a small step: an experiment, a new concept, a skill I picked up along the way. This universe grows as I do.',
+    'No fake titles, no shortcuts — just curiosity, consistency, and a genuine love for building things on a screen.',
   ],
-  status: 'Sedang menjelajahi semesta kode.',
+  status: 'Currently exploring the universe of code.',
 } as const

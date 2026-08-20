@@ -24,7 +24,7 @@ export default function IdentityFrame() {
 
       <button
         onClick={() => setFlipped((v) => !v)}
-        aria-label="Putar foto profil"
+        aria-label="Flip profile photo"
         className="group relative h-full w-full [perspective:1200px]"
       >
         <motion.div
@@ -44,7 +44,7 @@ export default function IdentityFrame() {
       </button>
 
       <span className="absolute -bottom-9 left-1/2 -translate-x-1/2 whitespace-nowrap font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-starlight/40">
-        ketuk untuk putar
+        tap to rotate
       </span>
     </div>
   )

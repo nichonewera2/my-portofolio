@@ -24,11 +24,20 @@ export default {
         amber: {
           glow: '#fbbf7d',
         },
+        planet: {
+          mercury: '#9a958c',
+          venus: '#e0b872',
+          earth: '#4fa8e0',
+          mars: '#e0693f',
+          jupiter: '#d9a06b',
+          uranus: '#8fd8d0',
+          neptune: '#5470e0',
+        },
         starlight: '#e6ecff',
       },
       fontFamily: {
-        display: ['"Fredoka"', '"Sora"', 'sans-serif'],
-        body: ['"Sora"', 'sans-serif'],
+        display: ['"Unbounded"', '"Outfit"', 'sans-serif'],
+        body: ['"Outfit"', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
       },
       borderRadius: {
@@ -60,6 +69,12 @@ export default {
         'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
         drift: 'drift 30s linear infinite',
         shoot: 'shoot 5.5s linear infinite',
+        'galaxy-spin': 'spin 120s linear infinite',
+        'blackhole-pulse': 'blackhole-pulse 4s ease-in-out infinite',
+        'orbit-cw': 'spin 22s linear infinite',
+        'orbit-ccw': 'spin-reverse 28s linear infinite',
+        'glow-pulse-lg': 'glow-pulse-lg 5s ease-in-out infinite',
+        rise: 'rise 0.8s ease-out both',
       },
       keyframes: {
         'spin-reverse': {
@@ -96,6 +111,18 @@ export default {
           '4%': { opacity: 1 },
           '18%': { transform: 'translate(-320px, 180px)', opacity: 0 },
           '100%': { transform: 'translate(-320px, 180px)', opacity: 0 },
+        },
+        'blackhole-pulse': {
+          '0%, 100%': { opacity: 0.6, transform: 'scale(1)' },
+          '50%': { opacity: 1, transform: 'scale(1.08)' },
+        },
+        'glow-pulse-lg': {
+          '0%, 100%': { opacity: 0.35 },
+          '50%': { opacity: 0.75 },
+        },
+        rise: {
+          from: { opacity: 0, transform: 'translateY(18px)' },
+          to: { opacity: 1, transform: 'translateY(0)' },
         },
       },
     },
