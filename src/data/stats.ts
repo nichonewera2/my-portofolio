@@ -21,4 +21,6 @@ export const funFacts: FunFact[] = [
   { label: 'Cups of tea while debugging', value: '∞' },
   { label: 'Times "it works on my machine"', value: '17' },
   { label: 'Hours lost to CSS centering', value: '6+' },
+  { label: 'XXXTentacion & Bieber tracks on repeat', value: '24/7' },
+  { label: 'SpongeBob episodes rewatched', value: '100+' },
 ]

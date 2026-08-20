@@ -6,6 +6,7 @@ import Hero from '@/sections/Hero'
 import About from '@/sections/About'
 import Projects from '@/sections/Projects'
 import Skills from '@/sections/Skills'
+import Favorites from '@/sections/Favorites'
 import Stats from '@/sections/Stats'
 import Contact from '@/sections/Contact'
 
@@ -23,6 +24,7 @@ function App() {
           <About />
           <Projects />
           <Skills />
+          <Favorites />
           <Stats />
           <Contact />
         </main>
