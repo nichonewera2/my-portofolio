@@ -32,23 +32,6 @@
       "link": "https://Strumly.my.id",
       "codeLink": "",
       "addedAt": "2026-08-21T07:34:55.461533Z"
-    },
-    {
-      "id": "loopora-b1a3f7",
-      "title": "Loopora",
-      "description": "Loopora adalah website belajar coding lengkap untuk pemula yang ingin berkembang dari dasar hingga mahir. 💻 Pelajari 20+ bahasa pemrograman, ikuti materi yang terstruktur dan mudah dipahami, lalu uji kemampuanmu lewat quiz interaktif untuk mengasah pemahaman dan skill coding.",
-      "tags": [
-        "Flutter",
-        "Supabase",
-        "Next.js",
-        "Express"
-      ],
-      "status": "Live",
-      "accent": "violet",
-      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/loopora-b1a3f7.jpg",
-      "link": "https://loopora-learn.vercel.app",
-      "codeLink": "",
-      "addedAt": "2026-08-21T07:39:22.280417Z"
     }
   ]
 }
