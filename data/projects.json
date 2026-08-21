@@ -15,6 +15,23 @@
       "link": "https://tr4llifystudio.my.id",
       "codeLink": "",
       "addedAt": "2026-08-21T06:34:34.062578Z"
+    },
+    {
+      "id": "strumly-8ef91c",
+      "title": "Strumly",
+      "description": "Strumly adalah website belajar gitar lengkap yang dirancang untuk membantumu berkembang dari pemula hingga mahir. 🎸 Pelajari chord, teknik bermain, strumming, fingerstyle, teori musik, hingga lagu-lagu favoritmu melalui pengajaran yang terstruktur dan mudah dipahami.",
+      "tags": [
+        "HTML5",
+        "Vue.js",
+        "Docker",
+        "Kotlin"
+      ],
+      "status": "Live",
+      "accent": "cyan",
+      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/strumly-8ef91c.jpg",
+      "link": "https://Strumly.my.id",
+      "codeLink": "",
+      "addedAt": "2026-08-21T06:40:43.760288Z"
     }
   ]
 }
