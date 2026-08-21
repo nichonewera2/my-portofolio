@@ -19,24 +19,6 @@
       "addedAt": "2026-06-01T09:00:00.000Z"
     },
     {
-      "id": "digital-universe",
-      "title": "Nicholas' Digital Universe",
-      "description": "This very portfolio — a cinematic, space-themed site built to push my skills in animation, layout systems, and interactive design beyond a basic template.",
-      "tags": [
-        "React",
-        "TypeScript",
-        "Vite",
-        "Tailwind CSS",
-        "Framer Motion"
-      ],
-      "status": "Live",
-      "accent": "violet",
-      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/universe-cover.jpg",
-      "link": "",
-      "codeLink": "https://github.com/nichonewera2/my-portofolio",
-      "addedAt": "2026-08-20T09:00:00.000Z"
-    },
-    {
       "id": "tr4llify-studio-86fa14",
       "title": "Tr4llify Studio",
       "description": "Tr4llifyStudio adalah platform musik gratis tanpa iklan dengan pengalaman mendengarkan yang nyaman. Nikmati musik favoritmu dengan fitur equalizer, kontrol audio, dan berbagai fitur lainnya untuk membuat pengalaman musik jadi lebih personal. 🎵",
