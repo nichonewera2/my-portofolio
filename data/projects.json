@@ -65,6 +65,22 @@
       "link": "https://tr4lllokup1.netlify.app",
       "codeLink": "",
       "addedAt": "2026-08-21T23:53:20.171243Z"
+    },
+    {
+      "id": "mystikal-054c18",
+      "title": "Mystikal",
+      "description": "Mystikal Tools adalah website berisi berbagai tools unik dan menghibur dalam satu tempat. ✨ Coba fitur seperti cek khodam, kartu tarot, dan berbagai alat interaktif lainnya untuk seru-seruan, eksplorasi, dan hiburan.",
+      "tags": [
+        "Java",
+        "Vite",
+        "Framer Motion"
+      ],
+      "status": "Live",
+      "accent": "cyan",
+      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/mystikal-054c18.jpg",
+      "link": "https://mystikal-tools-tr4llera.vercel.app",
+      "codeLink": "",
+      "addedAt": "2026-08-21T23:55:10.910619Z"
     }
   ]
 }
