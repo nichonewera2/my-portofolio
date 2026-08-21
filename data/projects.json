@@ -1,22 +1,16 @@
 {
   "projects": [
     {
-      "id": "sitelens",
-      "title": "SiteLens",
-      "description": "A tool that captures a live visual snapshot of any website — just paste a URL and get an instant screenshot. Built to practice browser automation and clean, fast UI.",
-      "tags": ["Next.js", "React", "TypeScript", "Playwright", "Tailwind CSS"],
-      "status": "In Progress",
-      "accent": "cyan",
-      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/sitelens-cover.jpg",
-      "link": "",
-      "codeLink": "",
-      "addedAt": "2026-06-01T09:00:00.000Z"
-    },
-    {
       "id": "digital-universe",
       "title": "Nicholas' Digital Universe",
       "description": "This very portfolio — a cinematic, space-themed site built to push my skills in animation, layout systems, and interactive design beyond a basic template.",
-      "tags": ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion"],
+      "tags": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "Framer Motion"
+      ],
       "status": "Live",
       "accent": "violet",
       "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/universe-cover.jpg",
