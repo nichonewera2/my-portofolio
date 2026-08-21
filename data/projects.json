@@ -1,24 +1,6 @@
 {
   "projects": [
     {
-      "id": "sitelens",
-      "title": "SiteLens",
-      "description": "A tool that captures a live visual snapshot of any website — just paste a URL and get an instant screenshot. Built to practice browser automation and clean, fast UI.",
-      "tags": [
-        "Next.js",
-        "React",
-        "TypeScript",
-        "Playwright",
-        "Tailwind CSS"
-      ],
-      "status": "In Progress",
-      "accent": "cyan",
-      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/sitelens-cover.jpg",
-      "link": "",
-      "codeLink": "",
-      "addedAt": "2026-06-01T09:00:00.000Z"
-    },
-    {
       "id": "tr4llify-studio-86fa14",
       "title": "Tr4llify Studio",
       "description": "Tr4llifyStudio adalah platform musik gratis tanpa iklan dengan pengalaman mendengarkan yang nyaman. Nikmati musik favoritmu dengan fitur equalizer, kontrol audio, dan berbagai fitur lainnya untuk membuat pengalaman musik jadi lebih personal. 🎵",
