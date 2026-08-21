@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>404 — Signal Lost | Nicholas Orlando Hutajulu</title>
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body {
+        height: 100%;
+        background: #05060d;
+        color: #e6ecff;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 24px;
+        overflow: hidden;
+        position: relative;
+      }
+      .stars {
+        position: fixed;
+        inset: 0;
+        background-image:
+          radial-gradient(1.5px 1.5px at 20px 30px, rgba(230,236,255,.6), transparent),
+          radial-gradient(1.5px 1.5px at 120px 90px, rgba(230,236,255,.5), transparent),
+          radial-gradient(1px 1px at 60px 160px, rgba(230,236,255,.4), transparent),
+          radial-gradient(1.5px 1.5px at 200px 40px, rgba(230,236,255,.5), transparent),
+          radial-gradient(1px 1px at 260px 180px, rgba(230,236,255,.4), transparent);
+        background-repeat: repeat;
+        background-size: 300px 220px;
+        opacity: 0.8;
+      }
+      .content { position: relative; z-index: 1; max-width: 480px; }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid rgba(255,255,255,0.1);
+        background: rgba(255,255,255,0.04);
+        padding: 6px 14px;
+        border-radius: 999px;
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #5eead4;
+        margin-bottom: 24px;
+      }
+      h1 {
+        font-size: clamp(3.5rem, 12vw, 6rem);
+        font-weight: 900;
+        line-height: 1;
+        background: linear-gradient(90deg, #5eead4, #a78bfa);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      p.lead { margin-top: 16px; font-size: 1.1rem; font-weight: 600; }
+      p.sub { margin-top: 8px; font-size: 0.9rem; color: rgba(230,236,255,0.5); }
+      a.home-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 32px;
+        background: #5eead4;
+        color: #05060d;
+        font-weight: 700;
+        font-size: 0.9rem;
+        padding: 12px 28px;
+        border-radius: 999px;
+        text-decoration: none;
+        box-shadow: 0 0 30px -6px rgba(94,234,212,0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stars"></div>
+    <div class="content">
+      <span class="eyebrow">📡 Signal Lost</span>
+      <h1>404</h1>
+      <p class="lead">This coordinate doesn't exist in this universe.</p>
+      <p class="sub">The page you're looking for may have drifted off, been renamed, or never existed at all.</p>
+      <a class="home-btn" href="/">← Back to home</a>
+    </div>
+  </body>
+</html>
