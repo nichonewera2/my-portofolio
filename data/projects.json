@@ -1,23 +1,6 @@
 {
   "projects": [
     {
-      "id": "tr4llify-studio-92e631",
-      "title": "Tr4llify Studio",
-      "description": "Tr4llifyStudio adalah platform musik gratis tanpa iklan dengan pengalaman mendengarkan yang nyaman. Nikmati musik favoritmu dengan fitur equalizer, kontrol audio, dan berbagai fitur lainnya untuk membuat pengalaman musik jadi lebih personal. 🎵",
-      "tags": [
-        "Figma",
-        "MySQL",
-        "MongoDB",
-        "PHP"
-      ],
-      "status": "Live",
-      "accent": "cyan",
-      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/tr4llify-studio-92e631.jpg",
-      "link": "https://tr4llifystudio.my.id",
-      "codeLink": "",
-      "addedAt": "2026-08-21T07:34:04.174249Z"
-    },
-    {
       "id": "strumly-8aadbf",
       "title": "Strumly",
       "description": "Strumly adalah website belajar gitar lengkap yang dirancang untuk membantumu berkembang dari pemula hingga mahir. 🎸 Pelajari chord, teknik bermain, strumming, fingerstyle, teori musik, hingga lagu-lagu favoritmu melalui pengajaran yang terstruktur dan mudah dipahami.",
