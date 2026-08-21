@@ -12,7 +12,7 @@ import Projects from '@/sections/Projects'
 import Skills from '@/sections/Skills'
 import Timeline from '@/sections/Timeline'
 import Favorites from '@/sections/Favorites'
-import Testimonials from '@/sections/Testimonials'
+import Feedback from '@/sections/Feedback'
 import Stats from '@/sections/Stats'
 import Contact from '@/sections/Contact'
 import NotFound from '@/components/NotFound'
@@ -54,7 +54,7 @@ function App() {
           <Skills />
           <Timeline />
           <Favorites />
-          <Testimonials />
+          <Feedback />
           <Stats />
           <Contact />
         </main>
