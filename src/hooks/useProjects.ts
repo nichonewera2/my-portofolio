@@ -23,8 +23,9 @@ async function resolveBranch(signal: AbortSignal): Promise<string> {
     if (res.ok) {
       const info = await res.json()
       if (typeof info?.default_branch === 'string' && info.default_branch) {
-        cachedBranch = info.default_branch
-        return cachedBranch
+        const branch = info.default_branch
+        cachedBranch = branch
+        return branch
       }
     }
     console.warn(
