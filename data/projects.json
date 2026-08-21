@@ -31,6 +31,24 @@
       "link": "https://loopora-learn.vercel.app",
       "codeLink": "",
       "addedAt": "2026-08-21T07:41:58.435381Z"
+    },
+    {
+      "id": "tr4llify-studio-bf44e5",
+      "title": "Tr4llify Studio",
+      "description": "Tr4llifyStudio adalah platform musik gratis tanpa iklan dengan pengalaman mendengarkan yang nyaman. Nikmati musik favoritmu dengan fitur equalizer, kontrol audio, dan berbagai fitur lainnya untuk membuat pengalaman musik jadi lebih personal. 🎵",
+      "tags": [
+        "Node.js",
+        "Framer Motion",
+        "Prisma",
+        "MongoDB",
+        "Supabase"
+      ],
+      "status": "Live",
+      "accent": "cyan",
+      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/tr4llify-studio-bf44e5.jpg",
+      "link": "https://tr4llifystudio.my.id",
+      "codeLink": "",
+      "addedAt": "2026-08-21T13:45:08.707382Z"
     }
   ]
 }
