@@ -1,22 +1,3 @@
 {
-  "projects": [
-    {
-      "id": "digital-universe",
-      "title": "Nicholas' Digital Universe",
-      "description": "This very portfolio — a cinematic, space-themed site built to push my skills in animation, layout systems, and interactive design beyond a basic template.",
-      "tags": [
-        "React",
-        "TypeScript",
-        "Vite",
-        "Tailwind CSS",
-        "Framer Motion"
-      ],
-      "status": "Live",
-      "accent": "violet",
-      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/universe-cover.jpg",
-      "link": "",
-      "codeLink": "https://github.com/nichonewera2/my-portofolio",
-      "addedAt": "2026-08-20T09:00:00.000Z"
-    }
-  ]
+  "projects": []
 }
