@@ -45,15 +45,20 @@ export default function Projects() {
         />
 
         {isFallback && !loading && (
-          <button
-            type="button"
-            onClick={refresh}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-hairline/15 bg-surface/[0.04] px-3.5 py-1.5 font-mono text-[11px] text-starlight/50 transition-colors hover:text-starlight/80"
-          >
-            <WifiOff size={12} />
-            Showing offline data — couldn't reach the live project list
-            <RefreshCw size={12} />
-          </button>
+          <div className="mb-6 flex flex-wrap items-center gap-3 rounded-2xl border border-amber-400/25 bg-amber-400/[0.06] px-4 py-3">
+            <WifiOff size={16} className="shrink-0 text-amber-300" />
+            <p className="flex-1 text-sm text-starlight/70">
+              Showing offline sample data — couldn't load the live project list right now.
+            </p>
+            <button
+              type="button"
+              onClick={refresh}
+              className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1.5 font-mono text-[11px] font-semibold text-amber-300 transition-colors hover:bg-amber-400/20"
+            >
+              <RefreshCw size={12} />
+              Try again
+            </button>
+          </div>
         )}
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:gap-8">

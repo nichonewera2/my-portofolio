@@ -1,15 +1,40 @@
 import { useCallback, useEffect, useState } from 'react'
 import { FALLBACK_PROJECTS, type Project } from '@/data/projects'
 
-// The Telegram bot commits updates straight to this file in the repo.
-// raw.githubusercontent.com serves the latest committed content on the
-// given branch, with permissive CORS, so the browser can fetch it
-// directly with no backend of its own. Change GITHUB_BRANCH here if the
-// repo's default branch is ever renamed (e.g. to "master").
+// The Telegram bot commits updates straight to data/projects.json in this
+// repo. raw.githubusercontent.com serves the latest committed content with
+// permissive CORS, so the browser can fetch it directly with no backend of
+// its own.
 const GITHUB_OWNER = 'nichonewera2'
 const GITHUB_REPO = 'my-portofolio'
-const GITHUB_BRANCH = 'main'
-const DATA_URL = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/data/projects.json`
+const DATA_FILE_PATH = 'data/projects.json'
+
+// Branch name isn't hardcoded — repos can default to "main", "master", or
+// something else entirely, and getting this wrong would silently break
+// every live update. We ask GitHub's API once (cached for the tab's
+// session) instead of guessing.
+let cachedBranch: string | null = null
+
+async function resolveBranch(signal: AbortSignal): Promise<string> {
+  if (cachedBranch) return cachedBranch
+
+  try {
+    const res = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}`, { signal })
+    if (res.ok) {
+      const info = await res.json()
+      if (typeof info?.default_branch === 'string' && info.default_branch) {
+        cachedBranch = info.default_branch
+        return cachedBranch
+      }
+    }
+    console.warn(
+      `[useProjects] Couldn't read default branch from GitHub API (HTTP ${res.status}) — falling back to "main".`,
+    )
+  } catch (err) {
+    console.warn('[useProjects] GitHub API request for default branch failed — falling back to "main".', err)
+  }
+  return 'main'
+}
 
 type ProjectsState = {
   projects: Project[]
@@ -48,35 +73,61 @@ export function useProjects(): ProjectsState {
 
     async function load() {
       setLoading(true)
+      const branchesToTry: string[] = []
       try {
-        // Cache-bust so edits from the bot show up right away instead of
-        // waiting out the CDN's cache window.
-        const res = await fetch(`${DATA_URL}?_=${Date.now()}`, {
-          signal: controller.signal,
-          cache: 'no-store',
-        })
-        if (!res.ok) throw new Error(`HTTP ${res.status}`)
-
-        const json = await res.json()
-        const list = Array.isArray(json?.projects) ? json.projects : []
-        const valid = list.filter(isValidProject) as Project[]
-
-        if (valid.length === 0) throw new Error('empty or malformed project list')
-
-        // Newest first.
-        valid.sort((a, b) => new Date(b.addedAt).getTime() - new Date(a.addedAt).getTime())
-
-        if (!cancelled) {
-          setProjects(valid)
-          setIsFallback(false)
-        }
+        const branch = await resolveBranch(controller.signal)
+        branchesToTry.push(branch)
+        // Belt-and-suspenders: if the resolved branch's fetch somehow 404s
+        // (e.g. cached a stale answer), also try the other common default.
+        if (branch !== 'main') branchesToTry.push('main')
+        if (branch !== 'master') branchesToTry.push('master')
       } catch {
-        if (!cancelled) {
-          setProjects(FALLBACK_PROJECTS)
-          setIsFallback(true)
+        branchesToTry.push('main', 'master')
+      }
+
+      let lastError: unknown = null
+
+      for (const branch of branchesToTry) {
+        const url = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${branch}/${DATA_FILE_PATH}?_=${Date.now()}`
+        try {
+          const res = await fetch(url, { signal: controller.signal, cache: 'no-store' })
+          if (!res.ok) {
+            lastError = new Error(`HTTP ${res.status} fetching ${url}`)
+            continue
+          }
+
+          const json = await res.json()
+          const list = Array.isArray(json?.projects) ? json.projects : []
+          const valid = list.filter(isValidProject) as Project[]
+
+          if (valid.length === 0) {
+            lastError = new Error(`"${url}" returned no valid projects`)
+            continue
+          }
+
+          valid.sort((a, b) => new Date(b.addedAt).getTime() - new Date(a.addedAt).getTime())
+
+          if (!cancelled) {
+            setProjects(valid)
+            setIsFallback(false)
+            setLoading(false)
+          }
+          return
+        } catch (err) {
+          lastError = err
         }
-      } finally {
-        if (!cancelled) setLoading(false)
+      }
+
+      // Every branch attempt failed — fall back, and log exactly why so
+      // it's debuggable from the browser console (F12 → Console).
+      console.error(
+        '[useProjects] Could not load live project data from any branch. Showing offline fallback data instead. Last error:',
+        lastError,
+      )
+      if (!cancelled) {
+        setProjects(FALLBACK_PROJECTS)
+        setIsFallback(true)
+        setLoading(false)
       }
     }
 
