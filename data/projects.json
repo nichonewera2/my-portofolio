@@ -49,6 +49,22 @@
       "link": "https://tr4llifystudio.my.id",
       "codeLink": "",
       "addedAt": "2026-08-21T13:45:08.707382Z"
+    },
+    {
+      "id": "tr4lllokup-69c5f0",
+      "title": "Tr4lllokup",
+      "description": "Tr4llLookUp adalah website untuk mengecek informasi akun Free Fire hanya dengan menggunakan ID. 🔎 Lihat berbagai informasi akun yang tersedia dengan cepat dalam satu tempat, dengan tampilan sederhana dan mudah digunakan.",
+      "tags": [
+        "Next.js",
+        "Supabase",
+        "HTML5"
+      ],
+      "status": "Live",
+      "accent": "cyan",
+      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/tr4lllokup-69c5f0.jpg",
+      "link": "https://tr4lllokup1.netlify.app",
+      "codeLink": "",
+      "addedAt": "2026-08-21T23:53:20.171243Z"
     }
   ]
 }
