@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Terminal, CheckCircle2, AlertTriangle, Send } from 'lucide-react'
+import { Terminal, CheckCircle2, AlertTriangle, Send, RefreshCw } from 'lucide-react'
 import SectionHeading from '@/components/SectionHeading'
 import CommentAvatar from '@/components/CommentAvatar'
 import TimeAgo from '@/components/TimeAgo'
@@ -64,7 +64,13 @@ export default function Comments() {
       setPhase('locked')
       setName('')
       setText('')
-      refresh()
+
+      // raw.githubusercontent.com can take a few seconds to reflect a
+      // commit made via the API — one immediate refetch can race ahead of
+      // that propagation, so we retry a few times with backoff instead of
+      // trusting a single fetch right after submit.
+      const delays = [800, 2000, 4000, 7000]
+      delays.forEach((ms) => window.setTimeout(refresh, ms))
     } catch {
       setErrorText('Could not reach the server. Check your connection and try again.')
       setPhase('error')
@@ -183,9 +189,20 @@ export default function Comments() {
 
           {/* --- Signal log list --- */}
           <div className="glass-panel relative overflow-hidden rounded-bubble p-6 sm:p-8">
-            <div className="mb-5 flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-starlight/40">
-              <Terminal size={13} className="text-cyan-glow" />
-              Latest transmissions
+            <div className="mb-5 flex items-center justify-between gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-starlight/40">
+              <span className="flex items-center gap-2">
+                <Terminal size={13} className="text-cyan-glow" />
+                Latest transmissions
+              </span>
+              <button
+                type="button"
+                onClick={refresh}
+                className="flex items-center gap-1 rounded-full border border-hairline/10 px-2 py-1 text-[10px] normal-case tracking-normal text-starlight/40 transition-colors hover:text-starlight/70"
+                aria-label="Refresh comments"
+              >
+                <RefreshCw size={11} />
+                Refresh
+              </button>
             </div>
 
             {loading ? (
