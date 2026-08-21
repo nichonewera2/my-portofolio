@@ -13,6 +13,7 @@ import Skills from '@/sections/Skills'
 import Timeline from '@/sections/Timeline'
 import Favorites from '@/sections/Favorites'
 import Feedback from '@/sections/Feedback'
+import Comments from '@/sections/Comments'
 import Stats from '@/sections/Stats'
 import Contact from '@/sections/Contact'
 import NotFound from '@/components/NotFound'
@@ -55,6 +56,7 @@ function App() {
           <Timeline />
           <Favorites />
           <Feedback />
+          <Comments />
           <Stats />
           <Contact />
         </main>
