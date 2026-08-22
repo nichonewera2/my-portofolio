@@ -44,7 +44,7 @@ export default function Contact() {
             className="absolute -right-6 -top-10 hidden sm:block"
           />
 
-          <p className="font-mono text-sm font-medium text-cyan-glow">{profile.handle}</p>
+          <p className="font-mono text-sm font-medium text-accent-cyan">{profile.handle}</p>
           <h3 className="mt-2 text-2xl font-bold text-starlight">{profile.name}</h3>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -54,7 +54,7 @@ export default function Contact() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-bubble glass-panel glass-panel-hover flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-starlight/80 hover:text-starlight"
+                className="btn-bubble glass-panel glass-panel-hover flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-ink-1 hover:text-starlight"
               >
                 <SocialIcon icon={social.icon} size={16} />
                 {social.label}
@@ -63,7 +63,7 @@ export default function Contact() {
           </div>
         </motion.div>
 
-        <p className="mt-16 text-center text-xs text-starlight/30">
+        <p className="mt-16 text-center text-xs text-ink-4">
           © {new Date().getFullYear()} {profile.name}. Built with curiosity, one commit at a time.
         </p>
       </div>

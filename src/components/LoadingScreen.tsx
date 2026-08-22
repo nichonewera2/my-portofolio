@@ -108,10 +108,10 @@ export default function LoadingScreen() {
           </div>
 
           <div className="flex flex-col items-center gap-1.5">
-            <p className="font-display text-sm font-semibold tracking-[0.08em] text-starlight/90">
+            <p className="font-display text-sm font-semibold tracking-[0.08em] text-ink-1">
               N. Orlando
             </p>
-            <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-starlight/40">
+            <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-4">
               Entering the universe…
             </p>
           </div>

@@ -10,25 +10,25 @@ export const socials: SocialLink[] = [
   {
     id: 'whatsapp',
     label: 'WhatsApp',
-    href: 'https://wa.me/6281234567890',
+    href: 'https://whatsapp.com/channel/0029Vb8d2OPHltY2iYUU8B03',
     icon: 'whatsapp',
   },
   {
     id: 'telegram',
     label: 'Telegram',
-    href: 'https://t.me/Nicholas_ofc',
+    href: 'https://t.me/tr4llera',
     icon: 'telegram',
   },
   {
     id: 'instagram',
     label: 'Instagram',
-    href: 'https://instagram.com/Nicholas.ofc',
+    href: 'https://instagram.com/ockck11',
     icon: 'instagram',
   },
   {
     id: 'github',
     label: 'GitHub',
-    href: 'https://github.com/',
+    href: 'https://github.com/nichonewera2',
     icon: 'github',
   },
 ]

@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="section-shell relative border-t border-hairline/10 py-10">
       <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
-        <p className="text-xs text-starlight/40">
+        <p className="text-xs text-ink-4">
           © {new Date().getFullYear()} Nicholas Orlando Hutajulu. Built with care, one orbit at a time.
         </p>
 
@@ -26,7 +26,7 @@ export default function Footer() {
               bgColor="#ffffff"
             />
           </div>
-          <span className="font-mono text-[11px] text-starlight/40 transition-colors group-hover:text-starlight/70">
+          <span className="font-mono text-[11px] text-ink-4 transition-colors group-hover:text-ink-2">
             nicholashutajulu.web.id
           </span>
         </a>

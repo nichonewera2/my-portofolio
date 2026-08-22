@@ -41,7 +41,7 @@ export default function About() {
             className="glass-panel space-y-4 rounded-bubble-lg p-8 sm:p-10"
           >
             {profile.bio.map((paragraph, index) => (
-              <p key={index} className="leading-relaxed text-starlight/70">
+              <p key={index} className="leading-relaxed text-ink-2">
                 {paragraph}
               </p>
             ))}
@@ -55,20 +55,20 @@ export default function About() {
             className="flex flex-col gap-6"
           >
             <div className="glass-panel glass-panel-hover rounded-bubble p-6">
-              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-cyan-glow/10 text-cyan-glow">
+              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-cyan-glow/10 text-accent-cyan">
                 <GraduationCap size={20} />
               </div>
-              <p className="mt-4 font-mono text-xs font-medium uppercase tracking-[0.18em] text-starlight/40">
+              <p className="mt-4 font-mono text-xs font-medium uppercase tracking-[0.18em] text-ink-4">
                 Education
               </p>
               <p className="mt-1 text-lg font-semibold text-starlight">{profile.education}</p>
             </div>
 
             <div className="glass-panel glass-panel-hover rounded-bubble p-6">
-              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-violet-glow/10 text-violet-glow">
+              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-violet-glow/10 text-accent-violet">
                 <Rocket size={20} />
               </div>
-              <p className="mt-4 font-mono text-xs font-medium uppercase tracking-[0.18em] text-starlight/40">
+              <p className="mt-4 font-mono text-xs font-medium uppercase tracking-[0.18em] text-ink-4">
                 Mission
               </p>
               <p className="mt-1 text-lg font-semibold text-starlight">

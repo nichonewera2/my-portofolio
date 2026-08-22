@@ -94,7 +94,7 @@ export default function ScrollProgress() {
         >
           <span className="mt-[1px] h-1.5 w-1.5 rounded-full bg-cyan-glow shadow-glow" />
         </motion.span>
-        <span className="relative z-10 text-[10px] font-bold uppercase tracking-wider text-starlight/70">
+        <span className="relative z-10 text-[10px] font-bold uppercase tracking-wider text-ink-2">
           Up
         </span>
       </motion.button>

@@ -43,6 +43,18 @@
     --c-status-amber: 252 211 77;
     --c-status-emerald: 110 231 183;
     --c-status-sky: 125 211 252;
+
+    /* Muted text tiers — solid colors (not alpha blends of starlight),
+       tuned to look like the old translucent-white-on-black style. */
+    --c-ink-1: 196 201 217;
+    --c-ink-2: 157 161 175;
+    --c-ink-3: 128 132 144;
+    --c-ink-4: 84 86 94;
+
+    /* Accent text — matches the bright glow colors exactly in dark mode. */
+    --c-accent-cyan: 94 234 212;
+    --c-accent-violet: 167 139 250;
+    --c-accent-amber: 251 191 125;
   }
 
   html[data-theme='light'] {
@@ -62,6 +74,20 @@
     --c-status-amber: 146 64 14;
     --c-status-emerald: 4 120 87;
     --c-status-sky: 3 105 161;
+
+    /* Muted text tiers — solid, deliberately darker than a simple alpha
+       blend would give, so each tier still clears readable contrast
+       against this light background. */
+    --c-ink-1: 30 35 58;
+    --c-ink-2: 55 61 87;
+    --c-ink-3: 82 89 115;
+    --c-ink-4: 115 122 145;
+
+    /* Accent text — deeper, saturated versions of the brand colors so
+       they stay readable against the light background. */
+    --c-accent-cyan: 15 118 110;
+    --c-accent-violet: 109 40 217;
+    --c-accent-amber: 146 64 14;
   }
 
   * {
@@ -135,11 +161,11 @@
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-2 rounded-full border border-hairline/10 bg-surface/[0.03] px-3.5 py-1.5 font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-cyan-glow/90;
+    @apply inline-flex items-center gap-2 rounded-full border border-hairline/10 bg-surface/[0.03] px-3.5 py-1.5 font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-accent-cyan;
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-cyan-glow via-starlight to-violet-glow bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-accent-cyan via-starlight to-accent-violet bg-clip-text text-transparent;
   }
 
   .btn-bubble {

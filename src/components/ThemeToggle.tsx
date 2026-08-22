@@ -24,7 +24,7 @@ export default function ThemeToggle({ className }: { className?: string }) {
             animate={{ opacity: 1, rotate: 0, scale: 1 }}
             exit={{ opacity: 0, rotate: 90, scale: 0.5 }}
             transition={{ duration: 0.35, ease: 'easeOut' }}
-            className="flex items-center justify-center text-amber-glow"
+            className="flex items-center justify-center text-accent-amber"
           >
             <Sun size={17} strokeWidth={2.25} />
           </motion.span>
@@ -35,7 +35,7 @@ export default function ThemeToggle({ className }: { className?: string }) {
             animate={{ opacity: 1, rotate: 0, scale: 1 }}
             exit={{ opacity: 0, rotate: -90, scale: 0.5 }}
             transition={{ duration: 0.35, ease: 'easeOut' }}
-            className="flex items-center justify-center text-cyan-glow"
+            className="flex items-center justify-center text-accent-cyan"
           >
             <Moon size={16} strokeWidth={2.25} />
           </motion.span>

@@ -34,12 +34,12 @@ export default function Skills() {
               transition={{ duration: 0.5, ease: 'easeOut', delay: groupIndex * 0.08 }}
               className="glass-panel glass-panel-hover rounded-bubble p-6 hover:shadow-glow"
             >
-              <p className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-violet-glow/80">
+              <p className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-accent-violet">
                 {group.label}
               </p>
               <ul className="mt-4 space-y-2.5">
                 {group.items.map((skill) => (
-                  <li key={skill} className="flex items-center gap-2.5 text-sm text-starlight/70">
+                  <li key={skill} className="flex items-center gap-2.5 text-sm text-ink-2">
                     <span className="h-1 w-1 shrink-0 rounded-full bg-cyan-glow" />
                     {skill}
                   </li>

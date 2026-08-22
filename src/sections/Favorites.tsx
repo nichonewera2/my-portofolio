@@ -29,7 +29,7 @@ export default function Favorites() {
           ))}
         </div>
 
-        <p className="mt-6 text-center text-xs text-starlight/30">
+        <p className="mt-6 text-center text-xs text-ink-4">
           Tribute cards — stylised artwork, not official photography.
         </p>
       </div>

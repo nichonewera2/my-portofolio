@@ -36,7 +36,7 @@ export default function SectionHeading({
       {description && (
         <p
           className={cn(
-            'mt-4 max-w-2xl text-base text-starlight/60',
+            'mt-4 max-w-2xl text-base text-ink-3',
             align === 'center' && 'mx-auto',
           )}
         >

@@ -100,7 +100,7 @@ export default function Feedback() {
                 <span className="flex h-2 w-2 rounded-full bg-violet-glow/70 shadow-glow animate-pulse-glow [animation-delay:0.4s]" />
                 <span className="flex h-2 w-2 rounded-full bg-amber-glow/60 shadow-glow animate-pulse-glow [animation-delay:0.8s]" />
               </div>
-              <span className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.16em] text-starlight/40">
+              <span className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.16em] text-ink-4">
                 <Radio size={11} />
                 Channel Open
               </span>
@@ -133,7 +133,7 @@ export default function Feedback() {
                     />
 
                     <div>
-                      <label htmlFor="fb-name" className="mb-1.5 block font-mono text-[11px] uppercase tracking-wider text-starlight/40">
+                      <label htmlFor="fb-name" className="mb-1.5 block font-mono text-[11px] uppercase tracking-wider text-ink-4">
                         Callsign (optional)
                       </label>
                       <input
@@ -144,12 +144,12 @@ export default function Feedback() {
                         maxLength={80}
                         disabled={phase !== 'idle'}
                         placeholder="Your name"
-                        className="w-full rounded-xl border border-hairline/15 bg-surface/[0.04] px-4 py-2.5 text-sm text-starlight placeholder:text-starlight/30 outline-none transition-colors focus:border-cyan-glow/50 disabled:opacity-50"
+                        className="w-full rounded-xl border border-hairline/15 bg-surface/[0.04] px-4 py-2.5 text-sm text-starlight placeholder:text-ink-4 outline-none transition-colors focus:border-cyan-glow/50 disabled:opacity-50"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="fb-message" className="mb-1.5 block font-mono text-[11px] uppercase tracking-wider text-starlight/40">
+                      <label htmlFor="fb-message" className="mb-1.5 block font-mono text-[11px] uppercase tracking-wider text-ink-4">
                         Transmission
                       </label>
                       <textarea
@@ -160,9 +160,9 @@ export default function Feedback() {
                         disabled={phase !== 'idle'}
                         rows={5}
                         placeholder="Type your message into the void..."
-                        className="w-full resize-none rounded-xl border border-hairline/15 bg-surface/[0.04] px-4 py-3 text-sm text-starlight placeholder:text-starlight/30 outline-none transition-colors focus:border-cyan-glow/50 disabled:opacity-50"
+                        className="w-full resize-none rounded-xl border border-hairline/15 bg-surface/[0.04] px-4 py-3 text-sm text-starlight placeholder:text-ink-4 outline-none transition-colors focus:border-cyan-glow/50 disabled:opacity-50"
                       />
-                      <div className="mt-1 text-right font-mono text-[10px] text-starlight/30">
+                      <div className="mt-1 text-right font-mono text-[10px] text-ink-4">
                         {message.length}/{MAX_LEN}
                       </div>
                     </div>
@@ -208,16 +208,16 @@ export default function Feedback() {
                           }}
                         />
                       ))}
-                      <Radio size={26} className="relative z-10 text-cyan-glow" />
+                      <Radio size={26} className="relative z-10 text-accent-cyan" />
                     </div>
                     <p className="font-display text-lg font-bold text-starlight">Transmission Received</p>
-                    <p className="mt-1.5 max-w-xs text-sm text-starlight/50">
+                    <p className="mt-1.5 max-w-xs text-sm text-ink-3">
                       Your message just landed. Thanks for reaching out — I'll read it soon.
                     </p>
                     <button
                       type="button"
                       onClick={reset}
-                      className="mt-6 inline-flex items-center gap-2 rounded-full border border-hairline/15 bg-surface/[0.04] px-4 py-2 font-mono text-xs text-starlight/60 transition-colors hover:text-starlight"
+                      className="mt-6 inline-flex items-center gap-2 rounded-full border border-hairline/15 bg-surface/[0.04] px-4 py-2 font-mono text-xs text-ink-3 transition-colors hover:text-starlight"
                     >
                       <RotateCcw size={12} />
                       Send another

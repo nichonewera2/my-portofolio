@@ -101,11 +101,11 @@ export default function Comments() {
                   animate={{ opacity: 1, y: 0 }}
                   className="flex h-full min-h-[220px] flex-col items-center justify-center text-center"
                 >
-                  <CheckCircle2 size={36} className="mb-4 text-cyan-glow" />
+                  <CheckCircle2 size={36} className="mb-4 text-accent-cyan" />
                   <p className="font-display text-lg font-bold text-starlight">
                     {justSubmitted ? 'Comment logged!' : "You've already logged a comment"}
                   </p>
-                  <p className="mt-1.5 max-w-xs text-sm text-starlight/50">
+                  <p className="mt-1.5 max-w-xs text-sm text-ink-3">
                     {justSubmitted
                       ? 'Thanks for leaving your mark on this page.'
                       : 'Each visitor gets one entry in the log — thanks for stopping by.'}
@@ -131,7 +131,7 @@ export default function Comments() {
                   />
 
                   <div>
-                    <label htmlFor="c-name" className="mb-1.5 block font-mono text-[11px] uppercase tracking-wider text-starlight/40">
+                    <label htmlFor="c-name" className="mb-1.5 block font-mono text-[11px] uppercase tracking-wider text-ink-4">
                       Your name
                     </label>
                     <input
@@ -142,12 +142,12 @@ export default function Comments() {
                       onChange={(e) => setName(e.target.value.slice(0, MAX_NAME))}
                       disabled={phase !== 'idle'}
                       placeholder="e.g. Alex"
-                      className="w-full rounded-xl border border-hairline/15 bg-surface/[0.04] px-4 py-2.5 text-sm text-starlight placeholder:text-starlight/30 outline-none transition-colors focus:border-cyan-glow/50 disabled:opacity-50"
+                      className="w-full rounded-xl border border-hairline/15 bg-surface/[0.04] px-4 py-2.5 text-sm text-starlight placeholder:text-ink-4 outline-none transition-colors focus:border-cyan-glow/50 disabled:opacity-50"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="c-text" className="mb-1.5 block font-mono text-[11px] uppercase tracking-wider text-starlight/40">
+                    <label htmlFor="c-text" className="mb-1.5 block font-mono text-[11px] uppercase tracking-wider text-ink-4">
                       Comment
                     </label>
                     <textarea
@@ -158,9 +158,9 @@ export default function Comments() {
                       onChange={(e) => setText(e.target.value.slice(0, MAX_COMMENT))}
                       disabled={phase !== 'idle'}
                       placeholder="Say something for the log..."
-                      className="w-full resize-none rounded-xl border border-hairline/15 bg-surface/[0.04] px-4 py-3 text-sm text-starlight placeholder:text-starlight/30 outline-none transition-colors focus:border-cyan-glow/50 disabled:opacity-50"
+                      className="w-full resize-none rounded-xl border border-hairline/15 bg-surface/[0.04] px-4 py-3 text-sm text-starlight placeholder:text-ink-4 outline-none transition-colors focus:border-cyan-glow/50 disabled:opacity-50"
                     />
-                    <div className="mt-1 text-right font-mono text-[10px] text-starlight/30">
+                    <div className="mt-1 text-right font-mono text-[10px] text-ink-4">
                       {text.length}/{MAX_COMMENT}
                     </div>
                   </div>
@@ -172,7 +172,7 @@ export default function Comments() {
                     </p>
                   )}
 
-                  <p className="text-[11px] text-starlight/30">One comment per visitor — make it count!</p>
+                  <p className="text-[11px] text-ink-4">One comment per visitor — make it count!</p>
 
                   <button
                     type="submit"
@@ -189,15 +189,15 @@ export default function Comments() {
 
           {/* --- Signal log list --- */}
           <div className="glass-panel relative overflow-hidden rounded-bubble p-6 sm:p-8">
-            <div className="mb-5 flex items-center justify-between gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-starlight/40">
+            <div className="mb-5 flex items-center justify-between gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-ink-4">
               <span className="flex items-center gap-2">
-                <Terminal size={13} className="text-cyan-glow" />
+                <Terminal size={13} className="text-accent-cyan" />
                 Latest transmissions
               </span>
               <button
                 type="button"
                 onClick={refresh}
-                className="flex items-center gap-1 rounded-full border border-hairline/10 px-2 py-1 text-[10px] normal-case tracking-normal text-starlight/40 transition-colors hover:text-starlight/70"
+                className="flex items-center gap-1 rounded-full border border-hairline/10 px-2 py-1 text-[10px] normal-case tracking-normal text-ink-4 transition-colors hover:text-ink-2"
                 aria-label="Refresh comments"
               >
                 <RefreshCw size={11} />
@@ -218,7 +218,7 @@ export default function Comments() {
                 ))}
               </div>
             ) : comments.length === 0 ? (
-              <p className="py-8 text-center text-sm text-starlight/40">
+              <p className="py-8 text-center text-sm text-ink-4">
                 {isFallback ? "Couldn't load the log right now — try refreshing." : 'No comments yet — be the first to log one!'}
               </p>
             ) : (
@@ -241,9 +241,9 @@ export default function Comments() {
                     <div className="min-w-0 flex-1">
                       <div className="flex flex-wrap items-baseline justify-between gap-x-2 gap-y-0.5">
                         <p className="truncate text-sm font-bold text-starlight">{c.name}</p>
-                        <TimeAgo iso={c.createdAt} className="shrink-0 font-mono text-[10px] text-starlight/35" />
+                        <TimeAgo iso={c.createdAt} className="shrink-0 font-mono text-[10px] text-ink-4" />
                       </div>
-                      <p className="mt-1 break-words text-sm leading-snug text-starlight/70">{c.comment}</p>
+                      <p className="mt-1 break-words text-sm leading-snug text-ink-2">{c.comment}</p>
                     </div>
                   </motion.li>
                 ))}

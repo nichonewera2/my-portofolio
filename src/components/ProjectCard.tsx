@@ -59,7 +59,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
       <div className="flex flex-1 flex-col p-7">
         <h3 className="font-display text-lg font-bold text-starlight">{project.title}</h3>
 
-        <p className="mt-3 flex-1 text-sm leading-relaxed text-starlight/60">
+        <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-3">
           {project.description}
         </p>
 
@@ -67,7 +67,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full border border-hairline/10 bg-surface/[0.03] px-2.5 py-1 font-mono text-[11px] text-starlight/55"
+              className="rounded-full border border-hairline/10 bg-surface/[0.03] px-2.5 py-1 font-mono text-[11px] text-ink-3"
             >
               {tag}
             </span>
@@ -81,7 +81,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm font-medium text-cyan-glow transition-colors hover:text-cyan-bright"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-accent-cyan transition-colors hover:text-cyan-bright"
               >
                 Visit <ArrowUpRight size={14} />
               </a>
@@ -91,7 +91,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
                 href={project.codeLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm font-medium text-starlight/60 transition-colors hover:text-starlight"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-ink-3 transition-colors hover:text-starlight"
               >
                 <Github size={14} /> Code
               </a>

@@ -65,9 +65,9 @@ export default function AudioPlayer() {
         )}
 
         {playing ? (
-          <Pause size={17} className="relative z-10 text-cyan-glow" fill="currentColor" />
+          <Pause size={17} className="relative z-10 text-accent-cyan" fill="currentColor" />
         ) : (
-          <Music2 size={17} className="relative z-10 text-starlight/80" />
+          <Music2 size={17} className="relative z-10 text-ink-1" />
         )}
       </button>
 

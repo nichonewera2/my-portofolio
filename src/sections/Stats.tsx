@@ -23,7 +23,7 @@ export default function Stats() {
             transition={{ duration: 0.6, ease: 'easeOut' }}
             className="glass-panel rounded-bubble-lg p-8 sm:p-10"
           >
-            <p className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-cyan-glow/80">
+            <p className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-accent-cyan">
               Language Breakdown
             </p>
 
@@ -31,8 +31,8 @@ export default function Stats() {
               {languageStats.map((lang, index) => (
                 <div key={lang.name}>
                   <div className="mb-2 flex items-center justify-between text-sm">
-                    <span className="font-medium text-starlight/85">{lang.name}</span>
-                    <span className="font-mono text-starlight/50">{lang.percent}%</span>
+                    <span className="font-medium text-ink-1">{lang.name}</span>
+                    <span className="font-mono text-ink-3">{lang.percent}%</span>
                   </div>
                   <div className="h-2.5 w-full overflow-hidden rounded-full bg-surface/[0.08]">
                     <motion.div
@@ -65,7 +65,7 @@ export default function Stats() {
                 className="glass-panel glass-panel-hover flex flex-col justify-between rounded-bubble p-5"
               >
                 <p className="font-display text-3xl font-bold text-gradient">{fact.value}</p>
-                <p className="mt-2 text-xs leading-snug text-starlight/55">{fact.label}</p>
+                <p className="mt-2 text-xs leading-snug text-ink-3">{fact.label}</p>
               </div>
             ))}
           </motion.div>

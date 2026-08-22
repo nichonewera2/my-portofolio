@@ -54,7 +54,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
           const next = current === 'dark' ? 'light' : 'dark'
           if (origin) {
             setTransition({ x: origin.x, y: origin.y, fromColor: VOID_COLORS[current] })
-            window.setTimeout(() => setTransition(null), 900)
+            window.setTimeout(() => setTransition(null), 680)
           }
           return next
         })

@@ -43,7 +43,7 @@ export default function IdentityFrame() {
         </motion.div>
       </button>
 
-      <span className="absolute -bottom-9 left-1/2 -translate-x-1/2 whitespace-nowrap font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-starlight/40">
+      <span className="absolute -bottom-9 left-1/2 -translate-x-1/2 whitespace-nowrap font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-ink-4">
         tap to rotate
       </span>
     </div>

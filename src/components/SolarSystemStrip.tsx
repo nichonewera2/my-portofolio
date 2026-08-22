@@ -47,7 +47,7 @@ export default function SolarSystemStrip() {
               }}
             />
           </div>
-          <span className="font-mono text-[9px] uppercase tracking-[0.14em] text-starlight/35">
+          <span className="font-mono text-[9px] uppercase tracking-[0.14em] text-ink-4">
             {planet.name}
           </span>
         </div>

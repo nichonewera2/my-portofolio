@@ -57,12 +57,12 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="mt-4 flex items-center justify-center gap-2 text-lg font-semibold text-cyan-glow/90 lg:justify-start">
+          <p className="mt-4 flex items-center justify-center gap-2 text-lg font-semibold text-accent-cyan lg:justify-start">
             <Sparkles size={16} className="shrink-0" />
             {profile.role}
           </p>
 
-          <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-starlight/65 sm:text-lg lg:mx-0">
+          <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-ink-2 sm:text-lg lg:mx-0">
             {profile.tagline}
           </p>
 
@@ -114,7 +114,7 @@ export default function Hero() {
         transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
         className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 sm:block"
       >
-        <ArrowDown className="text-starlight/30" size={20} />
+        <ArrowDown className="text-ink-4" size={20} />
       </motion.div>
     </section>
   )

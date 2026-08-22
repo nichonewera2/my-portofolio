@@ -47,7 +47,7 @@ export default function Navbar() {
           onClick={() => scrollTo('home')}
           className="font-display text-base font-bold text-starlight"
         >
-          N<span className="text-cyan-glow">.</span>Orlando
+          N<span className="text-accent-cyan">.</span>Orlando
         </button>
 
         <div className="flex items-center gap-3">
@@ -61,7 +61,7 @@ export default function Navbar() {
                   'relative shrink-0 rounded-full px-3.5 py-1.5 text-sm font-semibold transition-colors xl:px-4',
                   active === item.id
                     ? 'text-[#05060d]'
-                    : 'text-starlight/70 hover:text-starlight',
+                    : 'text-ink-2 hover:text-starlight',
                 )}
               >
                 {active === item.id && (
@@ -112,7 +112,7 @@ export default function Navbar() {
                     'rounded-2xl px-4 py-3 text-left text-sm font-semibold transition-colors',
                     active === item.id
                       ? 'bg-cyan-glow text-[#05060d]'
-                      : 'text-starlight/70 hover:bg-surface/5 hover:text-starlight',
+                      : 'text-ink-2 hover:bg-surface/5 hover:text-starlight',
                   )}
                 >
                   {item.label}

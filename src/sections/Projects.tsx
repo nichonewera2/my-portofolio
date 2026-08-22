@@ -47,7 +47,7 @@ export default function Projects() {
         {isFallback && !loading && (
           <div className="mb-6 flex flex-wrap items-center gap-3 rounded-2xl border border-amber-400/25 bg-amber-400/[0.06] px-4 py-3">
             <WifiOff size={16} className="shrink-0 text-status-amber" />
-            <p className="flex-1 text-sm text-starlight/70">
+            <p className="flex-1 text-sm text-ink-2">
               Showing offline sample data — couldn't load the live project list right now.
             </p>
             <button

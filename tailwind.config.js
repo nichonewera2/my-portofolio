@@ -24,6 +24,31 @@ export default {
           emerald: 'rgb(var(--c-status-emerald) / <alpha-value>)',
           sky: 'rgb(var(--c-status-sky) / <alpha-value>)',
         },
+        // Muted/secondary text tiers. NOT alpha-blended from starlight —
+        // low-opacity light text that looks great on a near-black backdrop
+        // becomes illegible on a near-white one (the math just doesn't
+        // carry over), so each tier is its own solid, contrast-checked
+        // color per theme instead. ink-1 = least muted (closest to full
+        // text color) down to ink-4 = most muted (tiny labels only).
+        ink: {
+          1: 'rgb(var(--c-ink-1) / <alpha-value>)',
+          2: 'rgb(var(--c-ink-2) / <alpha-value>)',
+          3: 'rgb(var(--c-ink-3) / <alpha-value>)',
+          4: 'rgb(var(--c-ink-4) / <alpha-value>)',
+        },
+        // Accent colors specifically for READABLE TEXT (eyebrows, links,
+        // headline gradients, icons-on-tinted-background). The bright
+        // cyan/violet/amber glow tones look great on the dark background
+        // but wash out to near-invisible on the light one, so text uses a
+        // deeper, more saturated shade in light mode. Borders, button
+        // fills, shadows, and decorative particles keep using the
+        // original fixed cyan-glow/violet-glow/amber-glow — only text
+        // needs to invert.
+        accent: {
+          cyan: 'rgb(var(--c-accent-cyan) / <alpha-value>)',
+          violet: 'rgb(var(--c-accent-violet) / <alpha-value>)',
+          amber: 'rgb(var(--c-accent-amber) / <alpha-value>)',
+        },
         navy: {
           DEFAULT: '#0d1226',
           light: '#141b36',

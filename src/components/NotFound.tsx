@@ -20,7 +20,7 @@ export default function NotFound() {
       <p className="mt-4 max-w-md text-lg font-semibold text-starlight">
         This coordinate doesn't exist in this universe.
       </p>
-      <p className="mt-2 max-w-sm text-sm text-starlight/50">
+      <p className="mt-2 max-w-sm text-sm text-ink-3">
         The page you're looking for may have drifted off, been renamed, or never existed at all.
       </p>
 
