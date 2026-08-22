@@ -84,6 +84,24 @@
       "link": "",
       "codeLink": "",
       "addedAt": "2026-08-22T05:00:07.257746Z"
+    },
+    {
+      "id": "tr4lllokup-5c3efc",
+      "title": "Tr4lllokup",
+      "description": "Tr4llLookUp adalah website untuk mengecek informasi akun Free Fire hanya dengan menggunakan ID. 🔎 Lihat berbagai informasi akun yang tersedia dengan cepat dalam satu tempat, dengan tampilan sederhana dan mudah digunakan.",
+      "tags": [
+        "REST API",
+        "Express",
+        "GraphQL",
+        "Supabase",
+        "Git"
+      ],
+      "status": "Live",
+      "accent": "violet",
+      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/tr4lllokup-5c3efc.jpg",
+      "link": "",
+      "codeLink": "",
+      "addedAt": "2026-08-22T05:00:59.349006Z"
     }
   ]
 }
