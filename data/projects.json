@@ -21,14 +21,14 @@
       "title": "Strumly",
       "description": "Strumly adalah website belajar gitar lengkap yang dirancang untuk membantumu berkembang dari pemula hingga mahir. 🎸 Pelajari chord, teknik bermain, strumming, fingerstyle, teori musik, hingga lagu-lagu favoritmu melalui pengajaran yang terstruktur dan mudah dipahami.",
       "tags": [
-        "JavaScript",
-        "PHP",
-        "Bootstrap"
+        "Python",
+        "HTML5",
+        "Framer Motion"
       ],
       "status": "Live",
       "accent": "cyan",
       "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/strumly-8aadbf.jpg",
-      "link": "https://Strumly.my.id",
+      "link": "",
       "codeLink": "",
       "addedAt": "2026-08-21T07:34:55.461533Z"
     },
