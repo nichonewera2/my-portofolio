@@ -66,6 +66,24 @@
       "link": "",
       "codeLink": "",
       "addedAt": "2026-08-22T04:59:08.232749Z"
+    },
+    {
+      "id": "mystikal-d330eb",
+      "title": "Mystikal",
+      "description": "Mystikal Tools adalah website berisi berbagai tools unik dan menghibur dalam satu tempat. ✨ Coba fitur seperti cek khodam, kartu tarot, dan berbagai alat interaktif lainnya untuk seru-seruan, eksplorasi, dan hiburan.",
+      "tags": [
+        "REST API",
+        "Vite",
+        "TypeScript",
+        "HTML5",
+        "Kotlin"
+      ],
+      "status": "Live",
+      "accent": "cyan",
+      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/mystikal-d330eb.jpg",
+      "link": "",
+      "codeLink": "",
+      "addedAt": "2026-08-22T05:00:07.257746Z"
     }
   ]
 }
