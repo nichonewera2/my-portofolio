@@ -1,6 +1,23 @@
 {
   "projects": [
     {
+      "id": "tr4llify-studio-92e631",
+      "title": "Tr4llify Studio",
+      "description": "Tr4llifyStudio adalah platform musik gratis tanpa iklan dengan pengalaman mendengarkan yang nyaman. Nikmati musik favoritmu dengan fitur equalizer, kontrol audio, dan berbagai fitur lainnya untuk membuat pengalaman musik jadi lebih personal. 🎵",
+      "tags": [
+        "Figma",
+        "MySQL",
+        "MongoDB",
+        "PHP"
+      ],
+      "status": "Live",
+      "accent": "cyan",
+      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/tr4llify-studio-92e631.jpg",
+      "link": "https://tr4llifystudio.my.id",
+      "codeLink": "",
+      "addedAt": "2026-08-21T07:34:04.174249Z"
+    },
+    {
       "id": "strumly-8aadbf",
       "title": "Strumly",
       "description": "Strumly adalah website belajar gitar lengkap yang dirancang untuk membantumu berkembang dari pemula hingga mahir. 🎸 Pelajari chord, teknik bermain, strumming, fingerstyle, teori musik, hingga lagu-lagu favoritmu melalui pengajaran yang terstruktur dan mudah dipahami.",
@@ -12,7 +29,7 @@
       "status": "Live",
       "accent": "cyan",
       "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/strumly-8aadbf.jpg",
-      "link": "",
+      "link": "https://Strumly.my.id",
       "codeLink": "",
       "addedAt": "2026-08-21T07:34:55.461533Z"
     },
@@ -28,91 +45,9 @@
       "status": "Live",
       "accent": "violet",
       "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/loopora-28d247.jpg",
-      "link": "",
+      "link": "https://loopora-learn.vercel.app",
       "codeLink": "",
       "addedAt": "2026-08-21T07:41:58.435381Z"
-    },
-    {
-      "id": "tr4llify-studio-bf44e5",
-      "title": "Tr4llify Studio",
-      "description": "Tr4llifyStudio adalah platform musik gratis tanpa iklan dengan pengalaman mendengarkan yang nyaman. Nikmati musik favoritmu dengan fitur equalizer, kontrol audio, dan berbagai fitur lainnya untuk membuat pengalaman musik jadi lebih personal. 🎵",
-      "tags": [
-        "Node.js",
-        "Framer Motion",
-        "Prisma",
-        "MongoDB",
-        "Supabase"
-      ],
-      "status": "Live",
-      "accent": "cyan",
-      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/tr4llify-studio-bf44e5.jpg",
-      "link": "",
-      "codeLink": "",
-      "addedAt": "2026-08-21T13:45:08.707382Z"
-    },
-    {
-      "id": "tr4lllokup-69c5f0",
-      "title": "Tr4lllokup",
-      "description": "Tr4llLookUp adalah website untuk mengecek informasi akun Free Fire hanya dengan menggunakan ID. 🔎 Lihat berbagai informasi akun yang tersedia dengan cepat dalam satu tempat, dengan tampilan sederhana dan mudah digunakan.",
-      "tags": [
-        "Next.js",
-        "Supabase",
-        "HTML5"
-      ],
-      "status": "Live",
-      "accent": "cyan",
-      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/tr4lllokup-69c5f0.jpg",
-      "link": "",
-      "codeLink": "",
-      "addedAt": "2026-08-21T23:53:20.171243Z"
-    },
-    {
-      "id": "mystikal-054c18",
-      "title": "Mystikal",
-      "description": "Mystikal Tools adalah website berisi berbagai tools unik dan menghibur dalam satu tempat. ✨ Coba fitur seperti cek khodam, kartu tarot, dan berbagai alat interaktif lainnya untuk seru-seruan, eksplorasi, dan hiburan.",
-      "tags": [
-        "Java",
-        "Vite",
-        "Framer Motion"
-      ],
-      "status": "Live",
-      "accent": "cyan",
-      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/mystikal-054c18.jpg",
-      "link": "",
-      "codeLink": "",
-      "addedAt": "2026-08-21T23:55:10.910619Z"
-    },
-    {
-      "id": "tr4llforge-79b819",
-      "title": "Tr4llForge",
-      "description": "Tr4llForge adalah website coding interaktif yang memungkinkanmu menulis dan menjalankan kode langsung di browser. 💻⚡ Cocok untuk bereksperimen, belajar, menguji program, dan mencoba berbagai kode dalam lingkungan yang praktis dan cepat.",
-      "tags": [
-        "HTML5",
-        "PHP",
-        "Vue.js"
-      ],
-      "status": "Live",
-      "accent": "violet",
-      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/tr4llforge-79b819.jpg",
-      "link": "",
-      "codeLink": "",
-      "addedAt": "2026-08-21T23:56:44.229575Z"
-    },
-    {
-      "id": "sitelens-cea0b6",
-      "title": "SiteLens",
-      "description": "SiteLens adalah website untuk membuat screenshot atau rekaman preview sebuah website hanya dengan memasukkan URL. 🌐📸 Cocok untuk dokumentasi, presentasi, testing, dan melihat tampilan website dengan cepat tanpa perlu membukanya secara manual.",
-      "tags": [
-        "Figma",
-        "Laravel",
-        "CSS3"
-      ],
-      "status": "Live",
-      "accent": "cyan",
-      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/sitelens-cea0b6.jpg",
-      "link": "",
-      "codeLink": "",
-      "addedAt": "2026-08-21T23:59:12.036243Z"
     }
   ]
 }

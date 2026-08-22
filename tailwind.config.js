@@ -14,6 +14,16 @@ export default {
         },
         hairline: 'rgb(var(--c-hairline) / <alpha-value>)',
         surface: 'rgb(var(--c-surface) / <alpha-value>)',
+        status: {
+          // Text sitting on a low-opacity status tint (error messages,
+          // Live/In Progress badges, offline notices) — needs to flip from
+          // a pale shade (readable on dark bg) to a deep shade (readable
+          // on light bg). See index.css for the two value sets.
+          red: 'rgb(var(--c-status-red) / <alpha-value>)',
+          amber: 'rgb(var(--c-status-amber) / <alpha-value>)',
+          emerald: 'rgb(var(--c-status-emerald) / <alpha-value>)',
+          sky: 'rgb(var(--c-status-sky) / <alpha-value>)',
+        },
         navy: {
           DEFAULT: '#0d1226',
           light: '#141b36',

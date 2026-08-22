@@ -37,6 +37,12 @@
     --c-starlight: 230 236 255;
     --c-hairline: 255 255 255;
     --c-surface: 255 255 255;
+
+    /* Status text — pale shades read well on this dark background. */
+    --c-status-red: 252 165 165;
+    --c-status-amber: 252 211 77;
+    --c-status-emerald: 110 231 183;
+    --c-status-sky: 125 211 252;
   }
 
   html[data-theme='light'] {
@@ -49,6 +55,13 @@
     --c-starlight: 17 22 44;
     --c-hairline: 17 22 44;
     --c-surface: 17 22 44;
+
+    /* Status text — deep, saturated shades needed for contrast on this
+       light background (the dark theme's pale versions would wash out). */
+    --c-status-red: 185 28 28;
+    --c-status-amber: 146 64 14;
+    --c-status-emerald: 4 120 87;
+    --c-status-sky: 3 105 161;
   }
 
   * {

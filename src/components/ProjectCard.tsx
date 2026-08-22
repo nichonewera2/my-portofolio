@@ -5,9 +5,9 @@ import type { Project } from '@/data/projects'
 import TimeAgo from '@/components/TimeAgo'
 
 const statusStyles: Record<Project['status'], string> = {
-  Live: 'bg-emerald-400/10 text-emerald-300 border-emerald-400/20',
-  'In Progress': 'bg-amber-400/10 text-amber-300 border-amber-400/20',
-  Prototype: 'bg-sky-400/10 text-sky-300 border-sky-400/20',
+  Live: 'bg-emerald-400/10 text-status-emerald border-emerald-400/20',
+  'In Progress': 'bg-amber-400/10 text-status-amber border-amber-400/20',
+  Prototype: 'bg-sky-400/10 text-status-sky border-sky-400/20',
 }
 
 export default function ProjectCard({ project, index }: { project: Project; index: number }) {
