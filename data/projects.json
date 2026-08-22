@@ -48,6 +48,24 @@
       "link": "https://loopora-learn.vercel.app",
       "codeLink": "",
       "addedAt": "2026-08-21T07:41:58.435381Z"
+    },
+    {
+      "id": "tr4llforge-9d2bd9",
+      "title": "Tr4llForge",
+      "description": "Tr4llForge adalah website coding interaktif yang memungkinkanmu menulis dan menjalankan kode langsung di browser. 💻⚡ Cocok untuk bereksperimen, belajar, menguji program, dan mencoba berbagai kode dalam lingkungan yang praktis dan cepat.",
+      "tags": [
+        "Webpack",
+        "Prisma",
+        "JavaScript",
+        "MySQL",
+        "Redux"
+      ],
+      "status": "Live",
+      "accent": "violet",
+      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/tr4llforge-9d2bd9.jpg",
+      "link": "",
+      "codeLink": "",
+      "addedAt": "2026-08-22T04:59:08.232749Z"
     }
   ]
 }
