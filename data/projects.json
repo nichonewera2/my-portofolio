@@ -37,9 +37,10 @@
       "title": "Loopora",
       "description": "Loopora adalah website belajar coding lengkap untuk pemula yang ingin berkembang dari dasar hingga mahir. 💻 Pelajari 20+ bahasa pemrograman, ikuti materi yang terstruktur dan mudah dipahami, lalu uji kemampuanmu lewat quiz interaktif untuk mengasah pemahaman dan skill coding.",
       "tags": [
-        "Framer Motion",
-        "CSS3",
-        "HTML5"
+        "JavaScript",
+        "Python",
+        "Docker",
+        "Prisma"
       ],
       "status": "Live",
       "accent": "violet",
