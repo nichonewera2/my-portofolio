@@ -134,6 +134,24 @@
       "link": "",
       "codeLink": "",
       "addedAt": "2026-08-22T05:05:46.829376Z"
+    },
+    {
+      "id": "sonicake-pocket-master-b417b0",
+      "title": "Sonicake pocket master",
+      "description": "website ini adalah website yang menyediakan 60+ preset gratis berkualitas untuk membantu menghasilkan suara gitar yang lebih keren. 🎸⚡ Nikmati berbagai preset siap pakai serta preset khusus untuk menemukan karakter sound yang sesuai dengan gaya bermainmu.",
+      "tags": [
+        "Bootstrap",
+        "React",
+        "Supabase",
+        "Prisma",
+        "Python"
+      ],
+      "status": "Live",
+      "accent": "cyan",
+      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/sonicake-pocket-master-b417b0.jpg",
+      "link": "",
+      "codeLink": "",
+      "addedAt": "2026-08-26T12:47:26.425951Z"
     }
   ]
 }
