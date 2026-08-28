@@ -152,6 +152,23 @@
       "link": "",
       "codeLink": "",
       "addedAt": "2026-08-26T12:47:26.425951Z"
+    },
+    {
+      "id": "absensi-virtual-a8688c",
+      "title": "Absensi-Virtual",
+      "description": "Absensi Virtual adalah website absensi digital yang praktis dan mudah digunakan. 📋📱 Catat kehadiran secara online dengan cepat, kelola data absensi, dan pantau riwayat kehadiran dalam satu tempat.",
+      "tags": [
+        "MySQL",
+        "Next.js",
+        "GraphQL",
+        "CSS3"
+      ],
+      "status": "In Progress",
+      "accent": "cyan",
+      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/absensi-virtual-a8688c.jpg",
+      "link": "",
+      "codeLink": "",
+      "addedAt": "2026-08-28T23:21:44.219981Z"
     }
   ]
 }
