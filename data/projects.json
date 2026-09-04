@@ -185,6 +185,23 @@
       "link": "",
       "codeLink": "",
       "addedAt": "2026-08-31T15:52:59.737781Z"
+    },
+    {
+      "id": "royal64-3fb6c2",
+      "title": "Royal64",
+      "description": "Royal64 adalah website catur online dengan berbagai fitur lengkap untuk pengalaman bermain yang lebih seru. ♟️🔥 Tantang pemain lain lewat multiplayer online, asah kemampuan melawan komputer, berinteraksi melalui chat saat pertandingan, atau saksikan pertandingan melalui mode penonton.",
+      "tags": [
+        "CSS3",
+        "Supabase",
+        "MongoDB",
+        "Flutter"
+      ],
+      "status": "Live",
+      "accent": "violet",
+      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/royal64-3fb6c2.jpg",
+      "link": "",
+      "codeLink": "",
+      "addedAt": "2026-09-04T08:04:04.942358Z"
     }
   ]
 }
