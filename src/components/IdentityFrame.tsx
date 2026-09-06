@@ -1,15 +1,37 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import profilePrimary from '@/assets/nicholas-profile.jpg'
-import profileAlt from '@/assets/nicholas-profile-alt.jpg'
+import photo1 from '@/assets/nicholas-profile.jpg'
+import photo2 from '@/assets/nicholas-profile-alt.jpg'
+import photo3 from '@/assets/nicholas-profile-2.jpg'
+import photo4 from '@/assets/nicholas-profile-3.jpg'
+
+const PHOTOS = [photo1, photo2, photo3, photo4]
 
 /**
- * The signature element of the hero: a HUD-style identity frame that flips
- * between two photos on click/tap, like a scanning ID card. Orbiting ring
- * and corner brackets reinforce the "digital universe" concept.
+ * The signature element of the hero: a HUD-style identity frame that spins
+ * to the next photo on every click/tap, like a scanning ID card cycling
+ * through profiles — 4 photos, click as many times as you like.
+ *
+ * Implementation note: this still uses a classic 2-sided 3D flip (only two
+ * faces exist in the DOM), but the currently-hidden face's image is
+ * swapped to the *next* photo in the sequence the instant it goes out of
+ * view, and the card keeps spinning one direction (0°, 180°, 360°, 540°…)
+ * rather than flip-flopping back and forth. That's what makes 4 distinct
+ * photos work with only two physical faces.
  */
 export default function IdentityFrame() {
-  const [flipped, setFlipped] = useState(false)
+  const [step, setStep] = useState(0)
+
+  const frontIndex = step % PHOTOS.length
+  const backIndex = (step + 1) % PHOTOS.length
+  const stepIsEven = step % 2 === 0
+
+  // Face A is fixed at local rotateY(0), Face B at local rotateY(180).
+  // Whichever one is currently facing the viewer gets `frontIndex`; the
+  // hidden one is pre-loaded with `backIndex` so it's ready before it
+  // rotates into view on the next click.
+  const faceAIndex = stepIsEven ? frontIndex : backIndex
+  const faceBIndex = stepIsEven ? backIndex : frontIndex
 
   return (
     <div className="relative mx-auto flex h-[320px] w-[280px] items-center justify-center sm:h-[380px] sm:w-[330px]">
@@ -23,22 +45,22 @@ export default function IdentityFrame() {
       </div>
 
       <button
-        onClick={() => setFlipped((v) => !v)}
-        aria-label="Flip profile photo"
+        onClick={() => setStep((s) => s + 1)}
+        aria-label="Show next photo"
         className="group relative h-full w-full [perspective:1200px]"
       >
         <motion.div
           className="relative h-full w-full [transform-style:preserve-3d]"
-          animate={{ rotateY: flipped ? 180 : 0 }}
+          animate={{ rotateY: step * 180 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          {/* Front face */}
+          {/* Face A */}
           <div className="absolute inset-0 [backface-visibility:hidden]">
-            <FrameFace src={profilePrimary} label="IDENT // 001" />
+            <FrameFace src={PHOTOS[faceAIndex]} index={faceAIndex} />
           </div>
-          {/* Back face */}
+          {/* Face B */}
           <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)]">
-            <FrameFace src={profileAlt} label="IDENT // 002" />
+            <FrameFace src={PHOTOS[faceBIndex]} index={faceBIndex} />
           </div>
         </motion.div>
       </button>
@@ -50,7 +72,9 @@ export default function IdentityFrame() {
   )
 }
 
-function FrameFace({ src, label }: { src: string; label: string }) {
+function FrameFace({ src, index }: { src: string; index: number }) {
+  const label = `IDENT // ${String(index + 1).padStart(3, '0')}`
+
   return (
     <div className="relative h-full w-full overflow-hidden rounded-[36px] border border-hairline/15 bg-navy shadow-panel">
       <img
