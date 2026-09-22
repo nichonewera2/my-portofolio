@@ -202,6 +202,24 @@
       "link": "",
       "codeLink": "",
       "addedAt": "2026-09-04T08:04:04.942358Z"
+    },
+    {
+      "id": "roomtr4ll-chat-7966ac",
+      "title": "RoomTr4ll - Chat",
+      "description": "💬 RoomTr4ll adalah tempat untuk ngobrol, berbagi cerita, dan bertemu orang-orang baru dalam satu ruang publik yang seru! 🚀 Masuk ke room yang kamu suka, mulai percakapan, kenalan dengan pengguna lain, dan nikmati pengalaman chatting yang simpel, cepat, dan menyenangkan. 🔥✨",
+      "tags": [
+        "PostgreSQL",
+        "Redux",
+        "GraphQL",
+        "Vite",
+        "MongoDB"
+      ],
+      "status": "Live",
+      "accent": "violet",
+      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/roomtr4ll-chat-7966ac.jpg",
+      "link": "",
+      "codeLink": "",
+      "addedAt": "2026-09-22T12:23:34.853715Z"
     }
   ]
 }
