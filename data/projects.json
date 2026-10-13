@@ -220,6 +220,23 @@
       "link": "",
       "codeLink": "",
       "addedAt": "2026-09-22T12:23:34.853715Z"
+    },
+    {
+      "id": "kost-gwen-2b8455",
+      "title": "Kost Gwen",
+      "description": "Website Kost Gwen adalah website untuk melihat detail kost , berdasarkan alamat, tampilan dan lain sebagainya",
+      "tags": [
+        "TypeScript",
+        "Vite",
+        "Supabase",
+        "Express"
+      ],
+      "status": "Live",
+      "accent": "cyan",
+      "cover": "https://raw.githubusercontent.com/nichonewera2/my-portofolio/main/data/images/kost-gwen-2b8455.jpg",
+      "link": "",
+      "codeLink": "",
+      "addedAt": "2026-10-13T13:09:05.257442Z"
     }
   ]
 }
